@@ -1,4 +1,4 @@
 # pzplUI
 A very customazible CSS libary<br>
-Will add description tommorow
+Check out documentation in the Wiki.
 ![Screenshot](https://raw.githubusercontent.com/ProgramistaZpolski/pzplUI/master/Screenshot_2020-11-27%20pzplUI.png)
