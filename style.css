@@ -23,6 +23,8 @@
     --info-blue: #00ACC1;
     --info-blue-hover: #0097A7;
     --alert-text-color: white;
+    --uncolor: #e0e1e2;
+    --uncolor-hover: #cacbcd;
 }
 
 body {
@@ -36,6 +38,37 @@ a {
     color: #007bff;
     text-decoration: none;
     background-color: transparent;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem
+}
+
+h2 {
+    font-size: 2rem
+}
+
+h3 {
+    font-size: 1.75rem
+}
+
+h4 {
+    font-size: 1.5rem
+}
+
+h5 {
+    font-size: 1.25rem
+}
+
+h6 {
+    font-size: 1rem
 }
 
 /* Backgrounds */
@@ -65,22 +98,133 @@ a {
 }
 
 .text-normal {
-	color: var(--blue) !important;
+    color: var(--blue) !important;
 }
+
 .text-success {
-	color: var(--green) !important;
+    color: var(--green) !important;
 }
+
 .text-error {
-	color: var(--red) !important;
+    color: var(--red) !important;
 }
+
 .text-danger {
-	color: var(--orange) !important;
+    color: var(--orange) !important;
 }
+
 .text-dark {
-	color: var(--black) !important;
+    color: var(--black) !important;
 }
+
 .text-info {
-	color: var(--info-blue) !important;
+    color: var(--info-blue) !important;
+}
+
+/* Layouts */
+
+.flexbox {
+    display: flex;
+}
+
+.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: .75rem;
+}
+
+.flex-80, .flex-75, .flex-65, .flex-60, .flex-50, .flex-45, .flex-40, .flex-35, .flex-30, .flex-25, .flex-20, .flex-10 {
+    flex: none;
+}
+
+.flex-100 {
+    width: 100%;
+}
+
+.flex-80 {
+    width: 80%;
+}
+
+.flex-75 {
+    width: 75%;
+}
+
+.flex-65 {
+    width: 65%;
+}
+
+.flex-60 {
+    width: 60%;
+}
+
+.flex-50 {
+    width: 50%;
+}
+
+.flex-45 {
+    width: 45%;
+}
+
+.flex-40 {
+    width: 40%;
+}
+
+.flex-35 {
+    width: 35%;
+}
+
+.flex-30 {
+    width: 30%;
+}
+
+.flex-25 {
+    width: 25%;
+}
+
+.flex-20 {
+    width: 20%;
+}
+
+.flex-10 {
+    width: 10%;
+}
+
+.multiline {
+    flex-wrap: wrap;
+}
+
+/* Layouts 2 */
+
+.container {
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 3rem 1.5rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.consended h1, .consended h2, .consended h3, .consended h4, .consended h5, .consended h6 {
+    margin: 0;
+    padding: 0;
 }
 
 /* Buttons */
@@ -160,6 +304,15 @@ a {
 
 .btn-dark:hover {
     background-color: var(--black-hover);
+}
+
+.btn-uncolor {
+    background-color: var(--uncolor);
+    color: var(--black);
+}
+
+.btn-uncolor:hover {
+    background-color: var(--uncolor-hover);
 }
 
 /* Alerts */
@@ -281,14 +434,23 @@ a {
         transform: rotate(360deg)
     }
 }
+
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	white-space: nowrap;
-	border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Box */
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0 .5em 1em -.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
+    padding: 1rem;
 }
