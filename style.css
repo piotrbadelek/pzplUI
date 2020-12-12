@@ -1,6 +1,8 @@
+/* pzplUI 1.2 */
 :root {
     --bg-color: white;
     --bg-text: black;
+    --button-text: black;
     --box-shadow-1: 0px 2px 3px rgba(50, 50, 50, 0.2);
     --box-shadow-2: 0px 3px 4px rgba(40, 40, 40, 0.4);
     --black: black;
@@ -38,6 +40,10 @@ a {
     color: #007bff;
     text-decoration: none;
     background-color: transparent;
+}
+
+[hidden] {
+    display: none !important;
 }
 
 /* Typography */
@@ -361,7 +367,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     font-size: 75%;
     font-weight: 700;
     line-height: 1;
-    /*text-align: center;*/
     color: #fff;
     border-radius: .25rem;
 }
