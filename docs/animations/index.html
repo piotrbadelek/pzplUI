@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try pzplUI - Animations</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        code {
+            line-height: 2;
+        }
+
+        .anim-showcase {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Try pzplUI - Animations</h1>
+    <h2>Spin</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-spin', 0);">Start animation</button>
+    <br><br><code>
+        &lt;h3 class="anim-spin"&gt;Hello World&lt;/h3&gt;
+    </code>
+    <h2>Top</h2><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-top', 1);">Start animation</button>
+    <br><br><code>
+        &lt;h3 class="anim-top"&gt;Hello World&lt;/h3&gt;
+    </code>
+    <h2>Bottom</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br><br><br><br><br><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-bottom', 2);">Start animation</button>
+    <br><br><code>
+        &lt;h3 class="anim-bottom"&gt;Hello World&lt;/h3&gt;
+    </code>
+    <h2>Left</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-left', 3);">Start animation</button>
+    <br><br><code>
+        &lt;h3 class="anim-left"&gt;Hello World&lt;/h3&gt;
+    </code>
+    <h2>Right</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-right', 4);">Start animation</button>
+    <br><br><code>
+        &lt;h3 class="anim-right"&gt;Hello World&lt;/h3&gt;
+    </code>
+    <h2>Zoom</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-zoom', 5);">Start animation</button>
+    <br><br><code>
+        &lt;h3 class="anim-zoom"&gt;Hello World&lt;/h3&gt;
+    </code>
+    <script>
+        function animationFramework(className, order) {
+            document.querySelectorAll(".anim-showcase")[order].classList.add(className);
+            setTimeout(function() {
+                document.querySelectorAll(".anim-showcase")[order].classList.remove(className);
+            }, 1500);
+        };
+    </script>
+</body>
+
+</html>
