@@ -1,9 +1,9 @@
-/* pzplUI 1.4 */
+/* pzplUI 1.5 */
 
 :root {
     --bg-color: white;
     --bg-text: black;
-    --button-text: black;
+    --button-text: white;
     --box-shadow-1: 0px 2px 3px rgba(50, 50, 50, 0.2);
     --box-shadow-2: 0px 3px 4px rgba(40, 40, 40, 0.4);
     --black: black;
@@ -31,13 +31,17 @@
     --uncolor-hover: #cacbcd;
     --animation-speed: 1.5s;
     --animation-transform: 300px;
+    --mp-spacing: 1rem;
+    --card-border-color: rgba(12, 12, 12, 0.125);
+    --card-header-bgcolor: rgba(0, 0, 0, .03);
+    --font-stack: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Neue", "Helvetica", Arial, Tahoma, Geneva, Verdana, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--bg-text);
     line-height: 1.5;
-    font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Neue", "Helvetica", Arial, Tahoma, Geneva, Verdana, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: var(--font-stack);
 }
 
 a {
@@ -55,10 +59,10 @@ code {
 }
 
 hr {
-	margin: 20px 0;
-	border: 0;
-	border-top: 1px solid #eeeeee;
-	border-bottom: 1px solid #ffffff;
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #ffffff;
 }
 
 /* Typography */
@@ -220,6 +224,10 @@ h6 {
     flex-wrap: wrap;
 }
 
+.center-flex {
+    justify-content: center !important;
+}
+
 /* Layouts 2 */
 
 .container {
@@ -257,14 +265,12 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 .btn {
     display: inline-block;
     font-weight: 400;
-    line-height: 1.5;
     color: var(--button-text);
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    background-color: transparent;
     border: 1px solid transparent;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -279,7 +285,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 .btn-normal {
     background-color: var(--blue);
-    color: var(--white);
 }
 
 .btn-normal:hover {
@@ -293,7 +298,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 .btn-success {
     background-color: var(--green);
-    color: var(--white);
 }
 
 .btn-success:hover {
@@ -302,7 +306,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 .btn-error {
     background-color: var(--red);
-    color: var(--white);
 }
 
 .btn-error:hover {
@@ -311,7 +314,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 .btn-danger {
     background-color: var(--orange);
-    color: var(--white);
 }
 
 .btn-danger:hover {
@@ -320,7 +322,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 .btn-info {
     background-color: var(--info-blue);
-    color: var(--white);
 }
 
 .btn-info:hover {
@@ -329,7 +330,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 .btn-dark {
     background-color: var(--black);
-    color: var(--white);
 }
 
 .btn-dark:hover {
@@ -337,8 +337,8 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .btn-uncolor {
-    background-color: var(--uncolor);
     color: var(--black);
+    background-color: var(--uncolor);
 }
 
 .btn-uncolor:hover {
@@ -415,22 +415,22 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .btn-block {
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .btn-lg {
-	padding: .5rem 1rem;
-	font-size: 1.25rem;
-	line-height: 1.5;
-	border-radius: .3rem;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
 }
 
 .btn-sm {
-	padding: .25rem .5rem;
-	font-size: .875rem;
-	line-height: 1.5;
-	border-radius: .2rem;
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
 }
 
 /* Alerts */
@@ -547,7 +547,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 @keyframes spinner-border {
     to {
-        -webkit-transform: rotate(360deg);
         transform: rotate(360deg)
     }
 }
@@ -625,7 +624,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     }
     to {
         opacity: 1;
-        top: 0;
+        bottom: 0;
     }
 }
 
@@ -690,14 +689,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     }
 }
 
-.anim-input {
-    transition: 0.4s ease-in-out;
-}
-
-.anim-input:focus {
-    width: 100%!important;
-}
-
 /* Image Utility Classes */
 
 .img-fluid {
@@ -746,9 +737,186 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .navbar-fixed {
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav-pill {
+    border-radius: .25rem;
+    display: block;
+    color: var(--white) !important;
+    background-color: var(--blue);
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+
+.not-pill {
+    color: var(--blue) !important;
+}
+
+/* Float utility classes */
+
+.float-start {
+    float: left;
+}
+
+.float-end {
+    float: right;
+}
+
+/* Interaction utility classes */
+
+.pointer-disabled {
+    pointer-events: none;
+}
+
+.pointer-revert {
+    pointer-events: auto;
+}
+
+.select-all {
+    user-select: all;
+}
+
+.select-none {
+    user-select: none;
+}
+
+.select-revert {
+    user-select: auto;
+}
+
+/* Padding and margin */
+
+.p0 {
+    padding: 0;
+}
+
+.p1 {
+    padding: calc(var(--mp-spacing) * 0.25);
+}
+
+.p2 {
+    padding: calc(var(--mp-spacing) * 0.5);
+}
+
+.p3 {
+    padding: var(--mp-spacing);
+}
+
+.p4 {
+    padding: calc(var(--mp-spacing) * 1.25);
+}
+
+.p5 {
+    padding: calc(var(--mp-spacing) * 1.5);
+}
+
+.p6 {
+    padding: calc(var(--mp-spacing) * 1.75);
+}
+
+.p7 {
+    padding: calc(var(--mp-spacing) * 2);
+}
+
+.m0 {
+    margin: 0;
+}
+
+.m1 {
+    margin: calc(var(--mp-spacing) * 0.25);
+}
+
+.m2 {
+    margin: calc(var(--mp-spacing) * 0.5);
+}
+
+.m3 {
+    margin: var(--mp-spacing);
+}
+
+.m4 {
+    margin: calc(var(--mp-spacing) * 1.25);
+}
+
+.m5 {
+    margin: calc(var(--mp-spacing) * 1.5);
+}
+
+.m6 {
+    margin: calc(var(--mp-spacing) * 1.75);
+}
+
+.m7 {
+    margin: calc(var(--mp-spacing) * 2);
+}
+
+/* Cards */
+
+.card {
+    border: 1px solid var(--card-border-color);
+    border-radius: .25rem;
+}
+
+.card-body {
+    padding: 1rem 1rem;
+}
+
+.card-header {
+    padding: .5rem 1rem;
+    background-color: var(--card-header-bgcolor);
+    border-bottom: 1px solid var(--card-border-color);
+}
+
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+    margin-top: 0;
+    margin-bottom: .75rem;
+}
+
+/* Modals */
+
+.modal {
+    width: 500px;
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: .3rem;
+    margin: auto;
+    max-width: 50%;
+}
+
+.modal-header {
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-body {
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: .75rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.modal-footer>* {
+    margin: .25rem;
 }
