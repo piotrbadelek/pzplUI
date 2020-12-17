@@ -7,10 +7,6 @@
     <title>Try pzplUI - Modals</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        code {
-            line-height: 2;
-        }
-
         .bgWhite {
             color: black;
         }
@@ -23,6 +19,8 @@
             background-repeat: no-repeat;
         }
     </style>
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js"></script>
 </head>
 
 <body>
@@ -32,22 +30,25 @@
     <div class="bgWhite">
         <div id="parallaxImg"></div>
     </div>
-    <br><br><code>
-        &lt;div class="bgWhite"&gt;<br>
-        &emsp;&emsp;&lt;div id="parallaxImg"&gt;&lt;/div&gt;<br>
-        &lt;/div&gt;<br>
-        &lt;style&gt;<br>
-        &emsp;&emsp;#parallaxImg {<br>
-        &emsp;&emsp;&emsp;&emsp;width: 640px;<br>
-        &emsp;&emsp;&emsp;&emsp;height: 426px;<br>
-        &emsp;&emsp;&emsp;&emsp;background-image: url(./aurora.jpg);<br>
-        &emsp;&emsp;&emsp;&emsp;background-size: 140%;<br>
-        &emsp;&emsp;}<br>
-        &lt;/style&gt;<br>
-        &lt;script&gt;<br>
-        &emsp;&emsp;parallax("#parallaxImg", 0.01);<br>
-        &lt;/script&gt;
-    </code>
+    <br><br>
+
+    <pre><code class="language-html">&lt;div class="bgWhite"&gt;
+    
+        &lt;div id="parallaxImg"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;style&gt;
+        #parallaxImg {
+            width: 640px;
+            height: 426px;
+            background-image: url(./aurora.jpg);
+            background-size: 140%;
+          }
+    &lt;/style&gt;
+    &lt;script&gt;
+        parallax("#parallaxImg", 0.01);
+    &lt;/script&gt;</code></pre>
+    
+    
     <script>
         // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
         // modal pzplUI Plugin

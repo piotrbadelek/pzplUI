@@ -7,14 +7,12 @@
     <title>Try pzplUI - Cards</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        code {
-            line-height: 2;
-        }
-
         .bgWhite {
             color: black;
         }
     </style>
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js"></script>
 </head>
 
 <body>
@@ -37,16 +35,22 @@
             </div>
         </div>
     </div>
-    <br><br><code>
-        &lt;div class="card" style="width: 18rem;"&gt;<br>
-        &emsp;&emsp;&lt;img src="./myImage.png"&gt;<br>
-        &emsp;&emsp;&lt;div class="card-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;h5&gt;Card title&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;br&gt;&lt;a href="#" class="btn btn-normal"&gt;Go somewhere&lt;/a&gt;<br>
-        &emsp;&emsp;&lt;/div&gt;<br>
+    <br><br>
+
+    <pre><code class="language-html">&lt;div class="card" style="width: 18rem;"&gt;
+        &lt;svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"&gt;
+                    &lt;title&gt;Placeholder&lt;/title&gt;
+                    &lt;rect width="100%" height="100%" fill="#868e96"&gt;&lt;/rect&gt;&lt;text x="50%" y="50%" fill="#dee2e6"
+                        dy=".3em"&gt;Image
+                        cap&lt;/text&gt;
+                &lt;/svg&gt;
+    
+        &lt;div class="card-body"&gt;
+            &lt;h5&gt;Card title&lt;/h5&gt;
+            &lt;p&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            &lt;br&gt;&lt;a href="#" class="btn btn-normal"&gt;Go somewhere&lt;/a&gt;
         &lt;/div&gt;
-    </code>
+    &lt;/div&gt;</code></pre>
 
     <h2>Card with header</h2>
     <div class="bgWhite">
@@ -61,19 +65,17 @@
             </div>
         </div>
     </div>
-    <br><br><code>
-        &lt;div class="card" style="width: 18rem;"&gt;<br>
-        &emsp;&emsp;&lt;div class="card-header"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;Featured<br>
-        &emsp;&emsp;&lt;/div&gt;<br>
-        &emsp;&emsp;&lt;div class="card-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;br&gt;&lt;a href="#" class="btn btn-normal"&gt;Go somewhere&lt;/a&gt;<br>
-        &emsp;&emsp;&lt;/div&gt;<br>
+    <br><br>
+    <pre><code class="language-html">&lt;div class="card" style="width: 18rem;"&gt;
+        &lt;div class="card-header"&gt;
+            Featured
         &lt;/div&gt;
-    </code>
-
+        &lt;div class="card-body"&gt;
+            &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+            &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            &lt;br&gt;&lt;a href="#" class="btn btn-normal"&gt;Go somewhere&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
     <h2>Colors!</h2>
     <div class="card text-white bg-normal m3" style="max-width: 18rem;">
         <div class="card-header">Header</div>
@@ -123,64 +125,54 @@
                 content.</p>
         </div>
     </div>
-    <code>
-        &lt;div class="card text-white bg-normal m3" style="max-width: 18rem;"&gt;<br>
-        &emsp;&emsp;&lt;div class="card-header"&gt;Header&lt;/div&gt;<br>
-        &emsp;&emsp;&lt;div class="card-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content.&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &lt;/div&gt;<br>
-        &lt;div class="card text-white bg-success m3" style="max-width: 18rem;"&gt;<br>
-        &emsp;&emsp;&lt;div class="card-header"&gt;Header&lt;/div&gt;<br>
-        &emsp;&emsp;&lt;div class="card-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content.&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &lt;/div&gt;<br>
-        &lt;div class="card text-white bg-error m3" style="max-width: 18rem;"&gt;<br>
-        &emsp;&emsp;&lt;div class="card-header"&gt;Header&lt;/div&gt;<br>
-        &emsp;&emsp;&lt;div class="card-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content.&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &lt;/div&gt;<br>
-        &lt;div class="card text-dark bg-danger m3" style="max-width: 18rem;"&gt;<br>
-        &emsp;&emsp;&lt;div class="card-header"&gt;Header&lt;/div&gt;<br>
-        &emsp;&emsp;&lt;div class="card-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content.&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &lt;/div&gt;<br>
-        &lt;div class="card text-white bg-info m3" style="max-width: 18rem;"&gt;<br>
-        &emsp;&emsp;&lt;div class="card-header"&gt;Header&lt;/div&gt;<br>
-        &emsp;&emsp;&lt;div class="card-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content.&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &lt;/div&gt;<br>
-        &lt;div class="card text-white bg-dark m3" style="max-width: 18rem;"&gt;<br>
-        &emsp;&emsp;&lt;div class="card-header"&gt;Header&lt;/div&gt;<br>
-        &emsp;&emsp;&lt;div class="card-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content.&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &lt;/div&gt;<br>
-        &lt;div class="card text-white bg-normal m3" style="max-width: 18rem;"&gt;<br>
-        &emsp;&emsp;&lt;div class="card-header"&gt;Header&lt;/div&gt;<br>
-        &emsp;&emsp;&lt;div class="card-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;content.&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &lt;/div&gt;
-    </code>
+    <pre><code class="language-html">&lt;div class="card text-white bg-normal m3" style="max-width: 18rem;"&gt;
+    &lt;div class="card-header"&gt;Header&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card text-white bg-success m3" style="max-width: 18rem;"&gt;
+    &lt;div class="card-header"&gt;Header&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Success card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card text-white bg-error m3" style="max-width: 18rem;"&gt;
+    &lt;div class="card-header"&gt;Header&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Danger card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card text-dark bg-danger m3" style="max-width: 18rem;"&gt;
+    &lt;div class="card-header"&gt;Header&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Warning card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card text-white bg-info m3" style="max-width: 18rem;"&gt;
+    &lt;div class="card-header"&gt;Header&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Info card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card text-white bg-dark m3" style="max-width: 18rem;"&gt;
+    &lt;div class="card-header"&gt;Header&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Dark card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </body>
 
 </html>

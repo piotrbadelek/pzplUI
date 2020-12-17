@@ -7,14 +7,12 @@
     <title>Try pzplUI - Modals</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        code {
-            line-height: 2;
-        }
-
         .bgWhite {
             color: black;
         }
     </style>
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js"></script>
 </head>
 
 <body>
@@ -37,23 +35,21 @@
         </div>
     </div>
     <button onclick="modalShowcaseFramework(0);" class="btn btn-normal">Show modal</button>
-    <br><br><code>
-        &lt;div class="modal"&gt;<br>
-        &emsp;&emsp;&lt;div class="modal-content"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;div class="modal-header consended"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;div class="modal-body"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;p&gt;Woohoo, you're reading this text in a modal!&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;div class="modal-footer"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;button type="button" class="btn btn-uncolor"&gt;Close&lt;/button&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;button type="button" class="btn btn-normal"&gt;Save<br>
-        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;changes&lt;/button&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
-        &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;
-    </code>
+    <br><br>
+    <pre><code class="language-html">&lt;div class="modal text-dark" id="myModal"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header consended"&gt;
+                &lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;p&gt;Woohoo, you're reading this text in a modal!&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-uncolor"&gt;Close&lt;/button&gt;
+                &lt;button type="button" class="btn btn-normal"&gt;Save changes&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>    
     <h2>Using the JS Plugin</h2>
     <h4>pzplUI incudes a JS plugin for handling modals. It can:
         <ul>
@@ -64,11 +60,10 @@
         </ul>
         <br>
         First, save the modal into the variable:<br>
-        <code>
-            let modalElement = $pzplui_modal.init("#myModal");
-        </code><br><br>
-        Now you can use <code>modalElement.show();</code> to show your modal.<br><br>
-        In order to hide the modal, use <code>modalElement.hide(payload);</code>.<br><br>
+        <pre><code class="language-js"> let modalElement = $pzplui_modal.init("#myModal"); </code></pre><br>
+        Now you can use 
+        <pre><code class="language-js">modalElement.show();</code></pre> to show your modal.<br><br>
+        In order to hide the modal, use <pre><code class="language-js">modalElement.hide(payload);</code></pre><br>
         Replace <code>payload</code> with the message you want to be carried.<br><br>
         For example, the Close button can carry the "notSaved" payload, while the Save button<br>
         can carry the "saved" payload. If you want to carry no payload, replace payload with undefined.
@@ -77,14 +72,13 @@
     <h4>You can write some JS code to handle showing and hiding the modal pretty easly. Simply,<br><br>
     Make a function that will set the display property to <code>block</code>, and a function that will set it back to <code>none</code><br><br>
     Some example code:<br><br>
-    <code>
-        function showModal() {<br>
-            &emsp;&emsp;document.querySelector("#myModal").style.display = "block";<br>
-        }<br>
-        function hideModal() {<br>
-            &emsp;&emsp;document.querySelector("#myModal").style.display = "none";<br>
-        }
-    </code></h4>
+    <pre><code class="language-js">function showModal() {
+        document.querySelector("#myModal").style.display = "block";
+    }
+    
+    function hideModal() {
+        document.querySelector("#myModal").style.display = "none";
+    }</code></pre></h4>
     <script>
         // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
         // modal pzplUI Plugin

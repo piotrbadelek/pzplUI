@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Try pzplUI - Flexbox</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js"></script>
     <style>
-        code {
-            line-height: 2;
-        }
-
         .elem_showcase {
             background-color: var(--green);
             height: 150px;
@@ -52,11 +50,14 @@
     </div><br>
     <button class="btn btn-normal" onclick="addColumn();">Add an element</button>
     <button class="btn btn-uncolor" onclick="delColumn();">Remove a element</button>
-    <br><br><code>&lt;div class="flexbox"&gt;<br>
-        &emsp;&emsp;&lt;div class="column"&gt;&lt;/div&gt;<br>
-        &emsp;&emsp;...<br>
-        &emsp;&emsp;&lt;div class="column"&gt;&lt;/div&gt;<br>
-    &lt;/div&gt;</code>
+    <br><br>
+    <pre><code class="language-html">&lt;div class="flexbox"&gt;
+        &lt;div class="column"&gt;&lt;/div&gt;
+        &lt;div class="column"&gt;&lt;/div&gt;
+        &lt;div class="column"&gt;&lt;/div&gt;
+        &lt;div class="column"&gt;&lt;/div&gt;
+        &lt;div class="column"&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>    
     <h2>Multiline Columns</h2>
     <div class="flexbox disablemargin2 multiline">
         <div class="column elem_showcase"></div>
@@ -78,11 +79,14 @@
     </div><br>
     <button class="btn btn-normal" onclick="addColumn2();">Add an element</button>
     <button class="btn btn-uncolor" onclick="delColumn2();">Remove a element</button>
-    <br><br><code>&lt;div class="flexbox multiline"&gt;<br>
-        &emsp;&emsp;&lt;div class="column"&gt;&lt;/div&gt;<br>
-        &emsp;&emsp;...<br>
-        &emsp;&emsp;&lt;div class="column"&gt;&lt;/div&gt;<br>
-    &lt;/div&gt;</code>
+    <br><br>
+    <pre><code class="language-html">&lt;div class="flexbox multiline"&gt;
+        &lt;div class="column"&gt;&lt;/div&gt;
+        &lt;div class="column"&gt;&lt;/div&gt;
+        &lt;div class="column"&gt;&lt;/div&gt;
+        &lt;!-- ... --&gt;
+        &lt;div class="column"&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>    
     <h2>Columns with specific size</h2>
     <div class="dismargin">
         <div class="flexbox">
@@ -220,140 +224,142 @@
             </div>
         </div>
     </div><br>
-    <br><br><code>&lt;div class="flexbox"&gt;<br>
-        &emsp;&emsp;&lt;div class="column flex-100"&gt;<br>
-        &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-100&lt;/p&gt;<br>
-        &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-80"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-80&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-75"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-75&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-65"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-65&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-60"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-60&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-50"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-50&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-45"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-45&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-40"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-40&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-35"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-35&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-30"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-30&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-25"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-25&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-20"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-20&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
-    &lt;div class="flexbox"&gt;<br>
-    &emsp;&emsp;&lt;div class="column flex-10"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;flex-10&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &emsp;&emsp;&lt;div class="column"&gt;<br>
-    &emsp;&emsp;&emsp;&emsp;&lt;p class="bg-success"&gt;Auto&lt;/p&gt;<br>
-    &emsp;&emsp;&lt;/div&gt;<br>
-    &lt;/div&gt;</code>
+    <br><br>
+
+    <pre><code class="language-html">&lt;div class="flexbox"&gt;
+        &lt;div class="column flex-100"&gt;
+            &lt;p class="bg-success"&gt;flex-100&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-80"&gt;
+            &lt;p class="bg-success"&gt;flex-80&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-75"&gt;
+            &lt;p class="bg-success"&gt;flex-75&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-65"&gt;
+            &lt;p class="bg-success"&gt;flex-65&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-60"&gt;
+            &lt;p class="bg-success"&gt;flex-60&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-50"&gt;
+            &lt;p class="bg-success"&gt;flex-50&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-45"&gt;
+            &lt;p class="bg-success"&gt;flex-45&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-40"&gt;
+            &lt;p class="bg-success"&gt;flex-40&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-35"&gt;
+            &lt;p class="bg-success"&gt;flex-35&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-30"&gt;
+            &lt;p class="bg-success"&gt;flex-30&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-25"&gt;
+            &lt;p class="bg-success"&gt;flex-25&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-20"&gt;
+            &lt;p class="bg-success"&gt;flex-20&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flexbox"&gt;
+        &lt;div class="column flex-10"&gt;
+            &lt;p class="bg-success"&gt;flex-10&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="column"&gt;
+            &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>    
     <script>
         function addColumn() {
             document.querySelector(".disablemargin").innerHTML += `<div class="column elem_showcase"></div>`;
