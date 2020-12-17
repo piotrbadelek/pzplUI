@@ -1,8 +1,8 @@
 /* pzplUI 1.5 */
 
 :root {
-    --bg-color: #343b42;
-    --bg-text: white;
+    --bg-color: white;
+    --bg-text: black;
     --button-text: white;
     --box-shadow-1: 0px 2px 3px rgba(50, 50, 50, 0.2);
     --box-shadow-2: 0px 3px 4px rgba(40, 40, 40, 0.4);
@@ -747,8 +747,8 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 .nav-pill {
     border-radius: .25rem;
     display: block;
-	color: var(--white) !important;
-	background-color: var(--blue);
+    color: var(--white) !important;
+    background-color: var(--blue);
     padding: .5rem 1rem;
     text-decoration: none;
 }
@@ -919,50 +919,4 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 .modal-footer>* {
     margin: .25rem;
-}
-
-/* Custom CSS */
-body, ol {
-    margin-left: 30px;
-}
-
-ol {
-    font-size: 1.25rem;
-}
-
-h2, h4 {
-    font-weight: 400;
-}
-
-a {
-    color: #74b7ff;
-}
-
-code {
-    padding: 10px;
-    background-color: #25292e;
-}
-
-.code-1 {
-    color: #ff9da4;
-}
-
-.code-2 {
-    color: #d1f1a9;
-}
-
-img {
-    width: 30vw;
-}
-
-fieldset {
-    width: 56%;
-    padding: 15px;
-}
-
-.bgWhite {
-    background-color: white;
-    display: inline-block;
-    padding: 30px;
-    border-radius: 5px;
 }
