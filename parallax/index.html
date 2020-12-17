@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try pzplUI - Modals</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .bgWhite {
+            color: black;
+        }
+
+        #parallaxImg {
+            width: 640px;
+            height: 426px;
+            background-image: url(../utility-classes/aurora-1197753_1280.jpg);
+            background-size: 140%;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js"></script>
+</head>
+
+<body>
+    <h1>Try pzplUI - Modals</h1>
+    <h2>Example Parallax</h2>
+    <i>Move your mouse over the image to see the effect!</i><br>
+    <div class="bgWhite">
+        <div id="parallaxImg"></div>
+    </div>
+    <br><br>
+
+    <pre><code class="language-html">&lt;div class="bgWhite"&gt;
+    
+        &lt;div id="parallaxImg"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;style&gt;
+        #parallaxImg {
+            width: 640px;
+            height: 426px;
+            background-image: url(./aurora.jpg);
+            background-size: 140%;
+          }
+    &lt;/style&gt;
+    &lt;script&gt;
+        parallax("#parallaxImg", 0.01);
+    &lt;/script&gt;</code></pre>
+    
+    
+    <script>
+        // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+        // modal pzplUI Plugin
+        "use strict";
+
+
+        let elementer;
+        let scaler;
+
+        function parallax(element, scale) {
+            document.addEventListener("mousemove", parallaxFramework);
+            elementer = document.querySelector(element);
+            scaler = scale;
+            function parallaxFramework(e) {
+                let windowWidth = window.innerWidth / 2;
+                let windowHeight = window.innerHeight / 2;
+                let _mouseX = e.clientX;
+                let _mouseY = e.clientY;
+                let _scale2 = scaler * 2;
+                let _depth1 = `${(_mouseX - windowWidth) * scaler}% ${(_mouseY - windowHeight) * scaler}%`;
+                let _depth2 = `${(_mouseX - windowWidth) * scaler}% ${(_mouseY - windowHeight) * scaler}%`;
+                let _depth3 = `${(_mouseX - windowWidth) * _scale2}% ${(_mouseY - windowHeight) * _scale2}%`;
+                let superWazneInfo = `${_depth3}, ${_depth2}, ${_depth1}`;
+                elementer.style.backgroundPosition = superWazneInfo;
+            };
+        };
+
+
+        parallax("#parallaxImg", 0.01)
+        // @license-end
+    </script>
+</body>
+
+</html>
