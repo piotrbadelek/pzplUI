@@ -1,6 +1,7 @@
-/* pzplUI 1.5 */
+/* pzplUI 1.5.2 */
 
 :root {
+    scroll-behavior: smooth;
     --bg-color: #343b42;
     --bg-text: white;
     --button-text: white;
@@ -29,6 +30,7 @@
     --alert-text-color: white;
     --uncolor: #e0e1e2;
     --uncolor-hover: #cacbcd;
+    --text-muted: #7d868e;
     --animation-speed: 1.5s;
     --animation-transform: 300px;
     --mp-spacing: 1rem;
@@ -96,6 +98,27 @@ h6 {
     font-size: 1rem;
 }
 
+.d1 {
+    font-size: 5rem;
+}
+
+.d2 {
+    font-size: 4.5rem;
+}
+
+.d3 {
+    font-size: 4rem;
+}
+
+.d4 {
+    font-size: 3.5rem;
+}
+
+mark {
+    padding: .2em;
+    background-color: #fff4b8;
+}
+
 /* Backgrounds */
 
 .bg-success {
@@ -146,8 +169,12 @@ h6 {
     color: var(--info-blue) !important;
 }
 
-.text-white {
+.text-white, .text-white * {
     color: var(--white) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
 }
 
 /* Layouts */
@@ -292,7 +319,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .btn:disabled {
-    opacity: 0.6;
+    opacity: .6;
     cursor: default;
 }
 
@@ -439,36 +466,31 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     padding: .75rem 1.25rem;
     border-radius: .25rem;
     margin-bottom: 1rem;
+    color: var(--alert-text-color);
 }
 
 .alert-normal {
     background-color: var(--blue-light);
-    color: var(--alert-text-color);
 }
 
 .alert-success {
     background-color: var(--green-light);
-    color: var(--alert-text-color);
 }
 
 .alert-error {
     background-color: var(--red-light);
-    color: var(--alert-text-color);
 }
 
 .alert-danger {
     background-color: var(--orange-light);
-    color: var(--alert-text-color);
 }
 
 .alert-info {
     background-color: var(--info-blue-light);
-    color: var(--alert-text-color);
 }
 
 .alert-dark {
     background-color: var(--black-light);
-    color: var(--alert-text-color);
 }
 
 /* Badges */
@@ -532,6 +554,11 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     margin-top: 1rem;
 }
 
+.progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+}
+
 /* Spinner */
 
 .spinner-border {
@@ -573,6 +600,10 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 /* Animations */
 
+.anim-top, .anim-bottom, .anim-left, .anim-right {
+    position: relative;
+}
+
 .anim-spin {
     animation: pzplui-spin var(--animation-speed) linear forwards;
 }
@@ -613,7 +644,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .anim-top {
-    position: relative;
     animation: pzplui-top var(--animation-speed) linear forwards;
 }
 
@@ -629,7 +659,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .anim-bottom {
-    position: relative;
     animation: pzplui-bottom var(--animation-speed) linear forwards;
 }
 
@@ -645,7 +674,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .anim-left {
-    position: relative;
     animation: pzplui-left var(--animation-speed) linear forwards;
 }
 
@@ -661,7 +689,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .anim-right {
-    position: relative;
     animation: pzplui-right var(--animation-speed) linear forwards;
 }
 
@@ -733,7 +760,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     padding-left: .5rem;
     display: block;
     padding: .5rem 1rem;
-    opacity: 0.8;
+    opacity: .8;
 }
 
 .navbar-fixed {
@@ -747,8 +774,8 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 .nav-pill {
     border-radius: .25rem;
     display: block;
-	color: var(--white) !important;
-	background-color: var(--blue);
+    color: var(--white) !important;
+    background-color: var(--blue);
     padding: .5rem 1rem;
     text-decoration: none;
 }
@@ -785,10 +812,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     user-select: none;
 }
 
-.select-revert {
-    user-select: auto;
-}
-
 /* Padding and margin */
 
 .p0 {
@@ -796,11 +819,11 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .p1 {
-    padding: calc(var(--mp-spacing) * 0.25);
+    padding: calc(var(--mp-spacing) * .25);
 }
 
 .p2 {
-    padding: calc(var(--mp-spacing) * 0.5);
+    padding: calc(var(--mp-spacing) * .5);
 }
 
 .p3 {
@@ -828,11 +851,11 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .m1 {
-    margin: calc(var(--mp-spacing) * 0.25);
+    margin: calc(var(--mp-spacing) * .25);
 }
 
 .m2 {
-    margin: calc(var(--mp-spacing) * 0.5);
+    margin: calc(var(--mp-spacing) * .5);
 }
 
 .m3 {
