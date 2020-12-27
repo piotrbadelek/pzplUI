@@ -1,8 +1,8 @@
-/* pzplUI 1.5.2 */
+/* pzplUI 1.6 */
 
 :root {
     scroll-behavior: smooth;
-    --bg-color: #343b42;
+    --bg-color: #212224;
     --bg-text: white;
     --button-text: white;
     --box-shadow-1: 0px 2px 3px rgba(50, 50, 50, 0.2);
@@ -36,7 +36,8 @@
     --mp-spacing: 1rem;
     --card-border-color: rgba(12, 12, 12, 0.125);
     --card-header-bgcolor: rgba(0, 0, 0, .03);
-    --font-stack: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Neue", "Helvetica", Arial, Tahoma, Geneva, Verdana, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --modal-footer: #dee2e6;
+    --font-stack: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Now Text", "Helvetica Neue", "Helvetica", Arial, Tahoma, Geneva, Verdana, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
@@ -529,6 +530,11 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     background-color: var(--black);
 }
 
+.badge-pill {
+    border-radius: 6rem !important;
+    padding: .35em .5em;
+}
+
 /* Navbar */
 
 .progress-bar {
@@ -926,7 +932,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 .modal-header {
     padding: 1rem 1rem;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--modal-footer);
 }
 
 .modal-body {
@@ -937,14 +943,117 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     display: flex;
     justify-content: flex-end;
     padding: .75rem;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid var(--modal-footer);
 }
 
 .modal-footer>* {
     margin: .25rem;
 }
 
+/* Pagination */
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.pag-link {
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    border: 1px solid var(--modal-footer);
+}
+
+.pag-item.active .pag-link {
+    color: #fff;
+    background-color: var(--blue);
+}
+
+.pag-item:first-child .pag-link {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.pag-item:last-child .pag-link {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.pag-lg .pag-link {
+    padding: .80rem 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.pag-sm .pag-link {
+    padding: .3rem .5rem;
+    font-size: .75rem;
+    line-height: 1.3;
+}
+
+/* Overflows */
+
+.overflow-auto {
+    overflow: auto !important;
+}
+
+.overflow-none {
+    overflow: hidden !important;
+}
+
+/* Forms */
+
+.inputs label {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    font-weight: 400;
+    text-align: center;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.inputs>input, .inputs>.form-select, .inputs>textarea {
+    flex: 1 1 auto;
+    width: 1%;
+}
+
+.inputs input, .inputs textarea {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.inputs> :not(:first-child) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 .25rem rgba(0, 102, 255, 0.438);
+}
+
+input, textarea {
+    transition: all 0.1s;
+    font-family: var(--font-stack);
+}
+
 /* Custom CSS */
+
 body, ol {
     margin-left: 30px;
 }
@@ -988,4 +1097,66 @@ fieldset {
     display: inline-block;
     padding: 30px;
     border-radius: 5px;
+}
+
+.cardDocs {
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cardDocs:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.cardDocs svg {
+    margin-top: 60px;
+}
+
+header {
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+header details {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.15s;
+}
+
+header a:hover {
+    transition: 0.15s;
+    color: #0071e9;
+}
+
+main, footer {
+    margin-left: 240px;
+    padding: 0px 10px;
+    margin-right: 30px;
+}
+
+footer {
+    margin-bottom: 10px;
+}
+
+.bgWhite {
+    background-color: white;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 5px;
+    color: black;
 }

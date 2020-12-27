@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pzplUI Cheatsheet</title>
+    <link rel="stylesheet" href="./style.css"> <!-- replace with link to pzplUI -->
+    <style>
+        h4 a {
+            font-weight: 400;
+        }
+
+        nav img {
+            width: 50px;
+        }
+
+        .anim-showcase {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Typography</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/typography/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <h1 class="d1">Display 1</h1>
+            <h1 class="d2">Display 2</h1>
+            <h1 class="d3">Display 3</h1>
+            <h1 class="d4">Display 4</h1>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6><br><br>
+            <h3>Lorem ipsum dolor sit amet <mark>consectetur</mark> adipisicing elit. Dolor, architecto?</h3>
+            <h3><del>Lorem ipsum dolor sit, amet</del> That's deleted text</h3>
+            <h3><s>Lorem ipsum dolor sit, amet</s> That's no longer accurate text</h3>
+            <h3><ins>Lorem ipsum dolor sit, amet</ins> That's text thats supposed to be an addition to a document</h3>
+            <h3><u>Lorem ipsum dolor sit, amet</u> This text is rendered as underlined</h3>
+            <h3><small>Lorem ipsum dolor sit, amet</small> That's text thats supposed to be trated as a fine print</h3>
+            <h3><b>Lorem ipsum dolor sit, amet</b> This text is bold</h3>
+            <h3><i>Lorem ipsum dolor sit, amet</i> This text is italic</h3>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Buttons</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/buttons/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <button class="btn btn-normal">Normal</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-error">Error</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-dark">Dark</button>
+            <button class="btn btn-uncolor">Uncolor</button><br><br>
+            <button class="btn btn-normal-outline">Normal</button>
+            <button class="btn btn-success-outline">Success</button>
+            <button class="btn btn-error-outline">Error</button>
+            <button class="btn btn-danger-outline">Danger</button>
+            <button class="btn btn-info-outline">Info</button>
+            <button class="btn btn-dark-outline">Dark</button>
+            <button class="btn btn-uncolor-outline">Uncolor</button><br><br>
+            <button class="btn btn-normal btn-sm">Small Button</button>
+            <button class="btn btn-normal">Normal Button</button>
+            <button class="btn btn-normal btn-lg">Big Button</button><br><br>
+            <button class="btn btn-normal btn-block">Button block!</button><br>
+            <button class="btn btn-success btn-lg btn-block">Big button block!</button><br><br>
+            <button class="btn btn-normal" disabled>Normal</button>
+            <button class="btn btn-success" disabled>Success</button>
+            <button class="btn btn-error" disabled>Error</button>
+            <button class="btn btn-danger" disabled>Danger</button>
+            <button class="btn btn-info" disabled>Info</button>
+            <button class="btn btn-dark" disabled>Dark</button>
+            <button class="btn btn-uncolor" disabled>Uncolor</button>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Alerts</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/alerts-badges/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <div class="alert alert-normal">Normal Alert</div>
+            <div class="alert alert-success">Success Alerts</div>
+            <div class="alert alert-error">Error Alert</div>
+            <div class="alert alert-danger">Danger Alert</div>
+            <div class="alert alert-info">Info Alert</div>
+            <div class="alert alert-dark">Dark Alert</div>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Badges</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/alerts-badges/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <h1>Lorem, ipsum. <span class="badge badge-normal">New</span></h1>
+            <h2>Lorem, ipsum. <span class="badge badge-success">New</span></h2>
+            <h3>Lorem, ipsum. <span class="badge badge-error">New</span></h3>
+            <h4>Lorem, ipsum. <span class="badge badge-danger">New</span></h4>
+            <h5>Lorem, ipsum. <span class="badge badge-dark">New</span></h5>
+            <h6>Lorem, ipsum. <span class="badge badge-info">New</span></h6>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Advanced Layouts</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/layouts-adv/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <div class="hero bg-success text-white consended">
+                <h1 class="title">Lorem ipsum dolor sit.</h1>
+                <h3 class="Subtitle">Lorem, ipsum dolor.</h3>
+            </div><br><br>
+            <div class="consended">
+                <h1>Lorem, ipsum.</h1>
+                <h2>Lorem, ipsum dolor.</h2>
+                <i>Lorem ipsum dolor sit amet.</i>
+            </div><br><br>
+            <div class="container bg-success text-white" style="width: 600px;">
+                <h1>Hello World!</h1>
+            </div><br>
+            <div class="container bg-success text-white" style="text-align: center;
+                border-radius: 5px;
+                padding: 4px;
+                width: 600px;">
+                <h1>Hello World!</h1>
+            </div><br><br>
+            <div class="box">
+                <h1>Lorem ipsum dolor sit.</h1>
+                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, molestiae quae ipsum ipsa excepturi a
+                    dolorem possimus hic libero sequi porro rerum omnis, eveniet dolorum maiores, ea minima nobis veniam
+                    impedit quod esse sed illum? Quidem, tempora possimus labore molestias ad magni natus ipsum itaque
+                    maxime eligendi, delectus perspiciatis quas.</span>
+                </h4>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Navbars</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/navbar/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <nav class="navbar bg-dark text-white">
+                <ul style="visibility: visible;">
+                    <li>
+                        <a href="#">Homepage</a>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav><br>
+            <nav class="navbar bg-dark text-white">
+                <a class="navbar-brand" href="javascript:void(0)">Company</a>
+                <!-- Links -->
+                <ul style="visibility: visible;">
+                    <li>
+                        <a href="javascript:void(0)">Homepage</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">News</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Contact</a>
+                    </li>
+                </ul>
+
+            </nav><br>
+            <nav class="navbar bg-dark text-white center-flex">
+                <a class="navbar-brand" href="javascript:void(0)">Company</a>
+                <!-- Links -->
+                <ul style="visibility: visible;">
+                    <li>
+                        <a href="javascript:void(0)">Homepage</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">News</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Contact</a>
+                    </li>
+                </ul>
+
+            </nav><br>
+            <nav class="navbar bg-dark text-white">
+                <ul style="visibility: visible;">
+                    <li class="nav-pill">
+                        <a href="javascript:void(0)">Homepage</a>
+                    </li>
+                    <li>
+                        <a class="not-pill" href="javascript:void(0)">News</a>
+                    </li>
+                    <li>
+                        <a class="not-pill" href="javascript:void(0)">Contact</a>
+                    </li>
+                </ul>
+
+            </nav><br>
+            <nav class="navbar bg-dark text-white center-flex">
+                <ul style="visibility: visible;">
+                    <li class="nav-pill">
+                        <a href="javascript:void(0)">Homepage</a>
+                    </li>
+                    <li>
+                        <a class="not-pill" href="javascript:void(0)">News</a>
+                    </li>
+                    <li>
+                        <a class="not-pill" href="javascript:void(0)">Contact</a>
+                    </li>
+                </ul>
+
+            </nav><br>
+            <nav class="navbar bg-normal text-white">
+                <a class="navbar-brand" href="javascript:void(0)"><img src="./browser-773215_640.png" loading="lazy"
+                        alt="Company"></a>
+                <!-- Links -->
+                <ul style="visibility: visible;">
+                    <li>
+                        <a href="javascript:void(0)">Homepage</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">News</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Contact</a>
+                    </li>
+                </ul>
+
+            </nav><br>
+
+            <nav class="navbar bg-success text-white">
+                <a class="navbar-brand" href="javascript:void(0)"><img src="./browser-773215_640.png" loading="lazy"
+                        alt="Company"></a>
+                <!-- Links -->
+                <ul style="visibility: visible;">
+                    <li>
+                        <a href="javascript:void(0)">Homepage</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">News</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Contact</a>
+                    </li>
+                </ul>
+
+            </nav><br>
+            <nav class="navbar bg-error text-white">
+                <a class="navbar-brand" href="javascript:void(0)"><img src="./browser-773215_640.png" loading="lazy"
+                        alt="Company"></a>
+                <!-- Links -->
+                <ul style="visibility: visible;">
+                    <li>
+                        <a href="javascript:void(0)">Homepage</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">News</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Contact</a>
+                    </li>
+                </ul>
+
+            </nav><br>
+            <nav class="navbar bg-danger text-white">
+                <a class="navbar-brand" href="javascript:void(0)"><img src="./browser-773215_640.png" loading="lazy"
+                        alt="Company"></a>
+                <!-- Links -->
+                <ul style="visibility: visible;">
+                    <li>
+                        <a href="javascript:void(0)">Homepage</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">News</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">Contact</a>
+                    </li>
+                </ul>
+
+            </nav><br>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Animations</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/animations/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <script>
+                function animationFramework(className, order) {
+                    document.querySelectorAll(".anim-showcase")[order].classList.add(className);
+                    setTimeout(function () {
+                        document.querySelectorAll(".anim-showcase")[order].classList.remove(className);
+                    }, 1500);
+                };
+            </script>
+            <h3 class="anim-showcase">Lorem, ipsum dolor.</h3><br>
+            <button class="btn btn-normal" onclick="animationFramework('anim-spin', 0);">Spin animation</button>
+            <button class="btn btn-normal" onclick="animationFramework('anim-top', 0);">Top animation</button>
+            <button class="btn btn-normal" onclick="animationFramework('anim-bottom', 0);">Bottom animation</button>
+            <button class="btn btn-normal" onclick="animationFramework('anim-left', 0);">Left animation</button>
+            <button class="btn btn-normal" onclick="animationFramework('anim-right', 0);">Right animation</button>
+            <button class="btn btn-normal" onclick="animationFramework('anim-zoom', 0);">Zoom animation</button>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Cards</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/cards/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <div class="card" style="width: 18rem;">
+                <img src="./house-2200715_1280.jpg" loading="lazy" alt="Card Image" class="img-fluid">
+
+                <div class="card-body">
+                    <h5>Card title</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, nesciunt. Ipsum, facere.
+                    </p>
+                    <br><a href="#" class="btn btn-normal">Go somewhere</a>
+                </div>
+            </div><br>
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, minima.</p>
+                    <br><a href="#" class="btn btn-normal">Go somewhere</a>
+                </div>
+            </div><br>
+            <div class="flexbox">
+                <div class="card text-white bg-normal m3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Primary card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </p>
+                    </div>
+                </div>
+                <div class="card text-white bg-success m3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Success card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </p>
+                    </div>
+                </div>
+                <div class="card text-white bg-error m3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Danger card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </p>
+                    </div>
+                </div>
+                <div class="card text-dark bg-danger m3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Warning card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="card text-white bg-info m3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Info card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </p>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark m3" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dark card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Utility Classes</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/utility-classes/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <h3 class="text-normal">Hello World</h3>
+            <h3 class="text-success">Hello World</h3>
+            <h3 class="text-error">Hello World</h3>
+            <h3 class="text-danger">Hello World</h3>
+            <h3 class="text-info">Hello World</h3>
+            <h3 class="text-dark">Hello World</h3><br>
+
+            <h3 class="bg-normal text-white">Hello World</h3>
+            <h3 class="bg-success text-white">Hello World</h3>
+            <h3 class="bg-error text-white">Hello World</h3>
+            <h3 class="bg-danger text-white">Hello World</h3>
+            <h3 class="bg-info text-white">Hello World</h3>
+            <h3 class="bg-dark text-white">Hello World</h3><br>
+
+            <div class="flexbox">
+                <div class="flex-30">
+                    <img src="./house-2200715_1280.jpg" alt="Aurora" class="img-fluid">
+                    <img src="./house-2200715_1280.jpg" alt="Aurora" class="img-round img-fluid">
+                </div>
+            </div><br>
+
+            <div class="bg-dark text-white img-round p3" style="width: 50vw; height: 10vh;">
+                <h2 class="float-start">I'm floated to the left!</h2>
+                <h2 class="float-end">I'm floated to the right!</h2>
+            </div><br>
+
+            <a href="#" class="pointer-disabled">Can't click!</a><br>
+            <a href="#" class="pointer-disabled">Can't click me, but you can <span class="pointer-revert">click
+                    this</span>!</a><br>
+
+            <h3 class="select-none">Haha, no selecting of this super important content!</h3>
+            <h3 class="select-all">Selecting all of this text!</h3><br>
+
+            <div style="width: 50vw;">
+                <div class="bg-success text-white p0">
+                    <h4>Padding of 0!</h4>
+                </div>
+                <div class="bg-success text-white p1 consended">
+                    <h4>Padding of 1!</h4>
+                </div><br>
+                <div class="bg-success text-white p2 consended">
+                    <h4>Padding of 2!</h4>
+                </div><br>
+                <div class="bg-success text-white p3 consended">
+                    <h4>Padding of 3!</h4>
+                </div><br>
+                <div class="bg-success text-white p4 consended">
+                    <h4>Padding of 4!</h4>
+                </div><br>
+                <div class="bg-success text-white p5 consended">
+                    <h4>Padding of 5!</h4>
+                </div><br>
+                <div class="bg-success text-white p6 consended">
+                    <h4>Padding of 6!</h4>
+                </div><br>
+                <div class="bg-success text-white p7 consended">
+                    <h4>Padding of 7!</h4>
+                </div><br><br>
+                <div class="bg-success text-white m0">
+                    <h4>Margin of 0!</h4>
+                </div>
+                <div class="bg-success text-white m1">
+                    <h4>Margin of 1!</h4>
+                </div><br>
+                <div class="bg-success text-white m2">
+                    <h4>Margin of 2!</h4>
+                </div><br>
+                <div class="bg-success text-white m3">
+                    <h4>Margin of 3!</h4>
+                </div><br>
+                <div class="bg-success text-white m4">
+                    <h4>Margin of 4!</h4>
+                </div><br>
+                <div class="bg-success text-white m5">
+                    <h4>Margin of 5!</h4>
+                </div><br>
+                <div class="bg-success text-white m6">
+                    <h4>Margin of 6!</h4>
+                </div><br>
+                <div class="bg-success text-white m7">
+                    <h4>Margin of 7!</h4>
+                </div><br>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Loading</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/loading/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-error" role="progressbar" style="width: 100%" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-normal" role="progressbar" style="width: 100%" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-dark" role="progressbar" style="width: 100%" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 25%"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="width: 50%"
+                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 75%"
+                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-error progress-bar-striped" role="progressbar" style="width: 100%"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-normal progress-bar-striped" role="progressbar" style="width: 100%"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-dark progress-bar-striped" role="progressbar" style="width: 100%"
+                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div><br>
+            <div class="spinner-border text-normal" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-success" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-error" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-info" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-border text-dark" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Modals</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/modals/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <button onclick="modalShowcaseFramework(0);" class="btn btn-normal">Show modal</button>
+            <div class="modal text-dark" id="myModal">
+                <div class="modal-content">
+                    <div class="modal-header consended">
+                        <h5 class="modal-title" id="exampleModalLiveLabel">Modal title</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>Woohoo, you're reading this text in a modal!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-uncolor"
+                            onclick="hideModalShowcaseFramework(0, 'close');">Close</button>
+                        <button type="button" class="btn btn-normal"
+                            onclick="hideModalShowcaseFramework(0, 'save');">Save
+                            changes</button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+                // modal pzplUI Plugin
+                "use strict";
+
+                let $pzplui_modal = {};
+
+                $pzplui_modal.init = function (selector) {
+                    let modal = document.querySelector(selector);
+                    return {
+                        "modal": modal,
+                        "shown": "false",
+                        "payload": undefined,
+                        "show": function () {
+                            this.modal.shown = true;
+                            this.modal.style.display = "block";
+                        },
+                        "hide": function (payload) {
+                            this.shown = false;
+                            this.payload = payload;
+                            this.modal.style.display = "none";
+                        }
+                    };
+                };
+                let modalTemp1 = $pzplui_modal.init("#myModal");
+                function modalShowcaseFramework(mod) {
+                    if (mod == 0) {
+                        modalTemp1.show();
+                    };
+                };
+
+                function hideModalShowcaseFramework(mod, payload) {
+                    if (mod == 0) {
+                        modalTemp1.hide(payload);
+                    };
+                };
+            // @license-end
+            </script>
+        </div>
+    </div><br><br><br>
+    <div class="flexbox">
+        <div class="column flex-20">
+            <h2>Flexbox</h2>
+            <h4><a href="http://programistazpolski.ct8.pl/pzplUI/try/flexbox/index.html"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                        <path
+                            d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                        <path fill-rule="evenodd"
+                            d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                    </svg> Documentation</a></h4>
+        </div>
+        <div class="column">
+            <div class="text-white">
+                <div class="flexbox">
+                    <div class="column flex-100">
+                        <p class="bg-success">flex-100</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-80">
+                        <p class="bg-success">flex-80</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-75">
+                        <p class="bg-success">flex-75</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-65">
+                        <p class="bg-success">flex-65</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-60">
+                        <p class="bg-success">flex-60</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-50">
+                        <p class="bg-success">flex-50</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-45">
+                        <p class="bg-success">flex-45</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-40">
+                        <p class="bg-success">flex-40</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-35">
+                        <p class="bg-success">flex-35</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-30">
+                        <p class="bg-success">flex-30</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-25">
+                        <p class="bg-success">flex-25</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-20">
+                        <p class="bg-success">flex-20</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+                <div class="flexbox">
+                    <div class="column flex-10">
+                        <p class="bg-success">flex-10</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-white">
+                <div class="flexbox">
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                    <div class="column">
+                        <p class="bg-success">Auto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+    <i class="p4">Bonus: Smooth Scrolling!
+        <a href="#">Try it out!</a>
+    </i>
+</body>
+
+</html>

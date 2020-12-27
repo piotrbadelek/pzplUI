@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try pzplUI</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js"></script>
+    <style>
+        .anim-showcase {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <details>
+            <summary>Components</summary>
+            <a href="../components/alert.html">Alerts</a><br>
+            <a href="../components/badge.html">Badges</a><br>
+            <a href="../components/box.html">Box</a><br>
+            <a href="../components/button.html">Buttons</a><br>
+            <a href="../components/card.html">Cards</a><br>
+            <a href="../components/hero.html">Hero</a><br>
+            <a href="../components/modal.html">Modals</a><br>
+            <a href="../components/navbar.html">Navbars</a><br>
+            <a href="../components/pagination.html">Pagination</a><br>
+            <a href="../components/progress.html">Progress</a><br>
+            <a href="../components/spinner.html">Spinners</a>
+        </details>
+        <details>
+            <summary>Layout</summary>
+            <a href="./index.html">Overview</a>
+        </details>
+        <details>
+            <summary>Forms</summary>
+            <a href="../forms/text.html">Text</a><br>
+            <a href="../forms/labels.html">Labels</a>
+        </details>
+        <details>
+            <summary>Examples</summary>
+            <a href="../examples/news/index.html">News</a><br>
+            <a href="../examples/video/index.html">Video</a><br>
+            <a href="../examples/cheatsheet/index.html">Cheatsheet</a><br>
+            <a href="../examples/boilerplate/index.html">Boilerplate</a><br>
+            <a href="../examples/container-boilerplate/index.html">Container Boilerplate</a>
+        </details>
+        <details open>
+            <summary>Others</summary>
+            <a href="./parallax.html">Parallax</a><br>
+            <a href="./typography.html">Typography</a><br>
+            <a href="./utils.html">Utils</a><br>
+            <a href="./animations.html">Animations</a>
+        </details>
+    </header>
+    <main>
+        <h1><a href="../index.html">pzplUI</a> / <a href="./customize.html">Other</a> / <a
+                href="./animations.html">Animations</a>
+        </h1>
+        <h2>Spin</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-spin', 0);">Start animation</button>
+    <br><br>
+    <pre><code class="language-html">&lt;h3 class="anim-spin"&gt;Hello World&lt;/h3&gt; </code></pre>
+    <h2>Top</h2><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-top', 1);">Start animation</button>
+    <br><br><pre><code class="language-html">&lt;h3 class="anim-top"&gt;Hello World&lt;/h3&gt; </code></pre>
+    <h2>Bottom</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br><br><br><br><br><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-bottom', 2);">Start animation</button>
+    <br><br><pre><code class="language-html">&lt;h3 class="anim-bottom"&gt;Hello World&lt;/h3&gt; </code></pre>
+    <h2>Left</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-left', 3);">Start animation</button>
+    <br><br><pre><code class="language-html">&lt;h3 class="anim-left"&gt;Hello World&lt;/h3&gt; </code></pre>
+    <h2>Right</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-right', 4);">Start animation</button>
+    <br><br><pre><code class="language-html">&lt;h3 class="anim-right"&gt;Hello World&lt;/h3&gt; </code></pre>
+    <h2>Zoom</h2>
+    <h3 class="anim-showcase">Hello World</h3><br><br>
+    <button class="btn btn-normal" onclick="animationFramework('anim-zoom', 5);">Start animation</button>
+    <br><br><pre><code class="language-html">&lt;h3 class="anim-zoom"&gt;Hello World&lt;/h3&gt; </code></pre>
+    <script>
+        function animationFramework(className, order) {
+            document.querySelectorAll(".anim-showcase")[order].classList.add(className);
+            setTimeout(function () {
+                document.querySelectorAll(".anim-showcase")[order].classList.remove(className);
+            }, 1500);
+        };
+    </script>
+    </main><br>
+    <footer>Content on this page is licensed under the MIT License.</footer>
+</body>
+
+</html>
