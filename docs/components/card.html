@@ -7,11 +7,17 @@
     <title>Try pzplUI</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../shared/prism.css">
-    <script src="../shared/prism.js"></script>
+    <script src="../shared/prism.js" defer></script>
+    <style>
+        .dark-mode .card a {
+            color: white;
+        }
+    </style>
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
         <details open>
             <summary>Components</summary>
             <a href="./alert.html">Alerts</a><br>
@@ -24,7 +30,8 @@
             <a href="./navbar.html">Navbars</a><br>
             <a href="./pagination.html">Pagination</a><br>
             <a href="./progress.html">Progress</a><br>
-            <a href="./spinner.html">Spinners</a>
+            <a href="./spinner.html">Spinners</a><br>
+            <a href="./tables.html">Tables</a>
         </details>
         <details>
             <summary>Layout</summary>
@@ -33,7 +40,8 @@
         <details>
             <summary>Forms</summary>
             <a href="../forms/text.html">Text</a><br>
-            <a href="../forms/labels.html">Labels</a>
+            <a href="../forms/labels.html">Labels</a><br>
+            <a href="../forms/others.html">Others</a>
         </details>
         <details>
             <summary>Examples</summary>
@@ -214,9 +222,41 @@
         &lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+        <h2>Horizontal Cards</h2>
+        <div class="bgWhite">
+            <div class="card flexbox" style="width: 25rem;">
+                <svg class="column" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="30%" y="50%" fill="#dee2e6"
+                        dy=".3em">Image
+                        cap</text>
+                </svg>
+
+                <div class="card-body column flex-50">
+                    <h5>Card title</h5>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                    <br><a href="#" class="btn btn-normal">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <pre><code class="language-html">&lt;div class="card flexbox" style="width: 25rem;"&gt;
+    &lt;img class="column" src="myImg.png" alt="image"&gt;
+
+    &lt;div class="card-body column flex-50"&gt;
+        &lt;h5&gt;Card title&lt;/h5&gt;
+        &lt;p&gt;Some quick example text to build on the card title and make up the bulk of the card's content.
+        &lt;/p&gt;
+        &lt;br&gt;&lt;a href="#" class="btn btn-normal"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
     </main><br>
     <footer>Content on this page is licensed under the MIT License.<br>
         Placeholder images from getbootstrap.com</footer>
+    <script src="../darkMode.js"></script>
 </body>
 
 </html>

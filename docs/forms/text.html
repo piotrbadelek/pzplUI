@@ -7,11 +7,19 @@
     <title>Try pzplUI</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../shared/prism.css">
-    <script src="../shared/prism.js"></script>
+    <script src="../shared/prism.js" defer></script>
+    <style>
+        .dark-mode {
+            --form1: #e9ecef;
+            --form2: #ced4da;
+            --form-shadow: 0 0 0 .25rem rgba(0, 102, 255, 0.438);
+        }
+    </style>
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
         <details>
             <summary>Components</summary>
             <a href="../components/alert.html">Alerts</a><br>
@@ -24,7 +32,8 @@
             <a href="../components/navbar.html">Navbars</a><br>
             <a href="../components/pagination.html">Pagination</a><br>
             <a href="../components/progress.html">Progress</a><br>
-            <a href="../components/spinner.html">Spinners</a>
+            <a href="../components/spinner.html">Spinners</a><br>
+            <a href="../components/tables.html">Tables</a>
         </details>
         <details>
             <summary>Layout</summary>
@@ -33,7 +42,8 @@
         <details open>
             <summary>Forms</summary>
             <a href="./text.html">Text</a><br>
-            <a href="./labels.html">Labels</a>
+            <a href="./labels.html">Labels</a><br>
+            <a href="./others.html">Others</a>
         </details>
         <details>
             <summary>Examples</summary>

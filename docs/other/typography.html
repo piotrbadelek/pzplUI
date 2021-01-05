@@ -7,7 +7,7 @@
     <title>Try pzplUI</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../shared/prism.css">
-    <script src="../shared/prism.js"></script>
+    <script src="../shared/prism.js" defer></script>
     <style>
         .bgWhite {
             /* this class just screams legacy code - like we dont have a text-dark class */
@@ -24,8 +24,9 @@
     </style>
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
         <details>
             <summary>Components</summary>
             <a href="../components/alert.html">Alerts</a><br>
@@ -38,7 +39,8 @@
             <a href="../components/navbar.html">Navbars</a><br>
             <a href="../components/pagination.html">Pagination</a><br>
             <a href="../components/progress.html">Progress</a><br>
-            <a href="../components/spinner.html">Spinners</a>
+            <a href="../components/spinner.html">Spinners</a><br>
+            <a href="../components/tables.html">Tables</a>
         </details>
         <details>
             <summary>Layout</summary>
@@ -47,7 +49,8 @@
         <details>
             <summary>Forms</summary>
             <a href="../forms/text.html">Text</a><br>
-            <a href="../forms/labels.html">Labels</a>
+            <a href="../forms/labels.html">Labels</a><br>
+            <a href="../forms/others.html">Others</a>
         </details>
         <details>
             <summary>Examples</summary>
@@ -69,33 +72,34 @@
         <h1><a href="../index.html">pzplUI</a> / <a href="./customize.html">Other</a> / <a
                 href="./typography.html">Typograpy</a>
         </h1>
-        <h1>Try pzplUI - Typography</h1>
-    <h2>Display Classes</h2>
-    <h1 class="d1">Lorem ipsum dolor sit amet.</h1>
-    <h1 class="d2">Lorem ipsum dolor sit amet.</h1>
-    <h1 class="d3">Lorem ipsum dolor sit amet.</h1>
-    <h1 class="d4">Lorem ipsum dolor sit amet.</h1>
-    <br><br>
-    <pre><code class="language-html">&lt;h1 class="d1"&gt;Lorem ipsum dolor sit amet.&lt;/h1&gt;
+        <h2>Display Classes</h2>
+        <h1 class="d1">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="d2">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="d3">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="d4">Lorem ipsum dolor sit amet.</h1>
+        <br><br>
+        <pre><code class="language-html">&lt;h1 class="d1"&gt;Lorem ipsum dolor sit amet.&lt;/h1&gt;
     &lt;h1 class="d2"&gt;Lorem ipsum dolor sit amet.&lt;/h1&gt;
     &lt;h1 class="d3"&gt;Lorem ipsum dolor sit amet.&lt;/h1&gt;
     &lt;h1 class="d4"&gt;Lorem ipsum dolor sit amet.&lt;/h1&gt;</code></pre>
-    <h2>Text marker</h2>
-    <div class="bgWhite">
-        <h3>Lorem ipsum, dolor sit amet <mark>consectetur</mark> adipisicing elit. Voluptatibus explicabo libero
-            obcaecati neque ratione distinctio?</h3>
-    </div>
-    <br><br>
-    <pre><code class="language-html">&lt;h3&gt;Lorem ipsum, dolor sit amet &lt;mark&gt;consectetur&lt;/mark&gt; adipisicing elit. Voluptatibus explicabo libero obcaecati neque ratione distinctio?&lt;/h3&gt;</code></pre>
-    <h2>Small and muted text</h2>
-    <div class="bgWhite">
-        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing. <small class="text-muted">Voluptatem adipisci officia
-                non!</small></h1>
-    </div>
-    <br><br>
-    <pre><code class="language-html">&lt;h1&gt;Lorem ipsum, dolor sit amet consectetur adipisicing. &lt;small class="text-muted"&gt;Voluptatem adipisci officia non!&lt;/small&gt;&lt;/h1&gt;</code></pre>
+        <h2>Text marker</h2>
+        <div class="bgWhite">
+            <h3>Lorem ipsum, dolor sit amet <mark>consectetur</mark> adipisicing elit. Voluptatibus explicabo libero
+                obcaecati neque ratione distinctio?</h3>
+        </div>
+        <br><br>
+        <pre><code class="language-html">&lt;h3&gt;Lorem ipsum, dolor sit amet &lt;mark&gt;consectetur&lt;/mark&gt; adipisicing elit. Voluptatibus explicabo libero obcaecati neque ratione distinctio?&lt;/h3&gt;</code></pre>
+        <h2>Small and muted text</h2>
+        <div class="bgWhite">
+            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing. <small class="text-muted">Voluptatem adipisci
+                    officia
+                    non!</small></h1>
+        </div>
+        <br><br>
+        <pre><code class="language-html">&lt;h1&gt;Lorem ipsum, dolor sit amet consectetur adipisicing. &lt;small class="text-muted"&gt;Voluptatem adipisci officia non!&lt;/small&gt;&lt;/h1&gt;</code></pre>
     </main><br>
     <footer>Content on this page is licensed under the MIT License.</footer>
+    <script src="../darkMode.js"></script>
 </body>
 
 </html>

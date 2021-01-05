@@ -7,11 +7,12 @@
     <title>Try pzplUI</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../shared/prism.css">
-    <script src="../shared/prism.js"></script>
+    <script src="../shared/prism.js" defer></script>
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
         <details open>
             <summary>Components</summary>
             <a href="./alert.html">Alerts</a><br>
@@ -24,7 +25,8 @@
             <a href="./navbar.html">Navbars</a><br>
             <a href="./pagination.html">Pagination</a><br>
             <a href="./progress.html">Progress</a><br>
-            <a href="./spinner.html">Spinners</a>
+            <a href="./spinner.html">Spinners</a><br>
+            <a href="./tables.html">Tables</a>
         </details>
         <details>
             <summary>Layout</summary>
@@ -33,7 +35,8 @@
         <details>
             <summary>Forms</summary>
             <a href="../forms/text.html">Text</a><br>
-            <a href="../forms/labels.html">Labels</a>
+            <a href="../forms/labels.html">Labels</a><br>
+            <a href="../forms/others.html">Others</a>
         </details>
         <details>
             <summary>Examples</summary>
@@ -55,72 +58,63 @@
                 href="javascript:alert('Components are a ready-to-go things in pzplUI to help you move faster with your development.');">Components</a>
             / <a href="./spinner.html">Spinners</a></h1>
         <h2>Spinners</h2>
-        <div class="spinner-border text-normal" role="status">
+        <div class="spinner text-normal" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-        <div class="spinner-border text-success" role="status">
+        <div class="spinner text-success" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-        <div class="spinner-border text-error" role="status">
+        <div class="spinner text-error" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-        <div class="spinner-border text-danger" role="status">
+        <div class="spinner text-danger" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-        <div class="spinner-border text-info" role="status">
+        <div class="spinner text-info" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-        <div class="spinner-border text-dark" role="status">
+        <div class="spinner text-dark" role="status">
             <span class="sr-only">Loading...</span>
         </div>
-        <div class="spinner-border text-white" role="status">
+        <div class="spinner text-white" role="status">
             <span class="sr-only">Loading...</span>
         </div>
         <br><br>
-        <pre><code class="language-html">&lt;div class="spinner-border text-normal" role="status"&gt;
+        <pre><code class="language-html">&lt;div class="spinner text-normal" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
 &lt;/div&gt;
-&lt;div class="spinner-border text-success" role="status"&gt;
+&lt;div class="spinner text-success" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
 &lt;/div&gt;
-&lt;div class="spinner-border text-error" role="status"&gt;
+&lt;div class="spinner text-error" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
 &lt;/div&gt;
-&lt;div class="spinner-border text-danger" role="status"&gt;
+&lt;div class="spinner text-danger" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
 &lt;/div&gt;
-&lt;div class="spinner-border text-info" role="status"&gt;
+&lt;div class="spinner text-info" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
 &lt;/div&gt;
-&lt;div class="spinner-border text-dark" role="status"&gt;
+&lt;div class="spinner text-dark" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
 &lt;/div&gt;
-&lt;div class="spinner-border text-white" role="status"&gt;
+&lt;div class="spinner text-white" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
 &lt;/div&gt;</code></pre>
-        <blockquote>
-            <h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-error"
-                    viewBox="0 0 16 16" style="margin-bottom: -6px;">
-                    <path
-                        d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                </svg> Depreciation Warning: In pzplUI 2.0 we will switch from <code>spinner-border</code> to simply
-                <code>spinner</code>.
-            </h4>
-        </blockquote>
         <h2>Usage with margin utilities</h2>
         <h4>If you want to have some space beetween spinners and content, you can use the margin utilities!</h4>
         <div class="bgWhite">
-            <div class="spinner-border text-normal m5" role="status">
+            <div class="spinner text-normal m5" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
         <br><br>
-        <pre><code class="language-html">&lt;div class="spinner-border text-normal m5" role="status"&gt;
+        <pre><code class="language-html">&lt;div class="spinner text-normal m5" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
 &lt;/div&gt;</code></pre>
     </main><br>
     <footer>Content on this page is licensed under the MIT License.</footer>
+    <script src="../darkMode.js"></script>
 </body>
 
 </html>

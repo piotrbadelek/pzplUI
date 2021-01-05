@@ -7,7 +7,7 @@
     <title>Try pzplUI</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../shared/prism.css">
-    <script src="../shared/prism.js"></script>
+    <script src="../shared/prism.js" defer></script>
     <style>
         /* tech debt over here, fix ASAP. */
         .elem_showcase {
@@ -39,8 +39,9 @@
     </style>
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
         <details>
             <summary>Components</summary>
             <a href="../components/alert.html">Alerts</a><br>
@@ -53,7 +54,8 @@
             <a href="../components/navbar.html">Navbars</a><br>
             <a href="../components/pagination.html">Pagination</a><br>
             <a href="../components/progress.html">Progress</a><br>
-            <a href="../components/spinner.html">Spinners</a>
+            <a href="../components/spinner.html">Spinners</a><br>
+            <a href="../components/tables.html">Tables</a>
         </details>
         <details open>
             <summary>Layout</summary>
@@ -62,7 +64,8 @@
         <details>
             <summary>Forms</summary>
             <a href="../forms/text.html">Text</a><br>
-            <a href="../forms/labels.html">Labels</a>
+            <a href="../forms/labels.html">Labels</a><br>
+            <a href="../forms/others.html">Others</a>
         </details>
         <details>
             <summary>Examples</summary>
@@ -143,14 +146,8 @@
     &lt;div class="column"&gt;&lt;/div&gt;
     &lt;div class="column"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h2>Multiline Columns</h2>
-        <div class="flexbox disablemargin2 multiline">
-            <div class="column elem_showcase"></div>
-            <div class="column elem_showcase"></div>
-            <div class="column elem_showcase"></div>
-            <div class="column elem_showcase"></div>
-            <div class="column elem_showcase"></div>
-            <div class="column elem_showcase"></div>
+        <h2>Singleline Columns</h2>
+        <div class="flexbox disablemargin2 Singleline">
             <div class="column elem_showcase"></div>
             <div class="column elem_showcase"></div>
             <div class="column elem_showcase"></div>
@@ -165,23 +162,13 @@
         <button class="btn btn-normal" onclick="addColumn2();">Add an element</button>
         <button class="btn btn-uncolor" onclick="delColumn2();">Remove a element</button>
         <br><br>
-        <pre><code class="language-html">&lt;div class="flexbox multiline"&gt;
+        <pre><code class="language-html">&lt;div class="flexbox singleline"&gt;
     &lt;div class="column"&gt;&lt;/div&gt;
     &lt;div class="column"&gt;&lt;/div&gt;
     &lt;div class="column"&gt;&lt;/div&gt;
     &lt;!-- ... --&gt;
     &lt;div class="column"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <blockquote>
-            <h4>
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-error"
-                    viewBox="0 0 16 16" style="margin-bottom: -6px;">
-                    <path
-                        d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                </svg> Important Notice: In pzplUI 2.0 all elements with the class <code>flexbox</code> will have the
-                <code>multiline</code> class automatically applied.
-            </h4>
-        </blockquote>
         <h2>Columns with specific size</h2>
         <div class="dismargin">
             <div class="flexbox">
@@ -471,6 +458,7 @@
         </script>
     </main><br>
     <footer>Content on this page is licensed under the MIT License.</footer>
+    <script src="../darkMode.js"></script>
 </body>
 
 </html>

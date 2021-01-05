@@ -23,6 +23,8 @@
             flex-wrap: wrap;
         }
     </style>
+    <script src="../../darkMode.js"></script>
+    <script src="../../modalPlugin.js" defer></script>
 </head>
 
 <body>
@@ -159,6 +161,39 @@
             </div>
         </div>
     </main>
+    <div class="modal text-dark" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header consended">
+                <h5 class="modal-title" id="exampleModalLiveLabel">Example Video</h5>
+            </div>
+            <div class="modal-body">
+                <object width="600" height="400">
+                    <param name="movie" value="vid.swf">
+                    <embed src="vid.swf" width="600" height="400">
+                    </embed><br>
+                    <img src="./flash_windows.gif" alt="Adobe Flash Player is required"><br>
+                    Video not loading? Install Adobe Flash Player.
+                </object>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-normal" onclick="modalHide();">Close</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function modalShow() {
+            let mdl = $pzplui_modal.init("#myModal");
+            mdl.show();
+        };
+        function modalHide() {
+            let mdl = $pzplui_modal.init("#myModal");
+            mdl.hide("videoClose");
+        };
+
+        document.querySelectorAll(".card").forEach(elem => {
+            elem.addEventListener("click", modalShow);
+        });
+    </script>
 </body>
 
 </html>

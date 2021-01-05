@@ -7,7 +7,7 @@
     <title>Try pzplUI</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../shared/prism.css">
-    <script src="../shared/prism.js"></script>
+    <script src="../shared/prism.js" defer></script>
     <style>
         nav img {
             width: 50px;
@@ -15,8 +15,9 @@
     </style>
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
         <details open>
             <summary>Components</summary>
             <a href="./alert.html">Alerts</a><br>
@@ -29,7 +30,8 @@
             <a href="./navbar.html">Navbars</a><br>
             <a href="./pagination.html">Pagination</a><br>
             <a href="./progress.html">Progress</a><br>
-            <a href="./spinner.html">Spinners</a>
+            <a href="./spinner.html">Spinners</a><br>
+            <a href="./tables.html">Tables</a>
         </details>
         <details>
             <summary>Layout</summary>
@@ -38,7 +40,8 @@
         <details>
             <summary>Forms</summary>
             <a href="../forms/text.html">Text</a><br>
-            <a href="../forms/labels.html">Labels</a>
+            <a href="../forms/labels.html">Labels</a><br>
+            <a href="../forms/others.html">Others</a>
         </details>
         <details>
             <summary>Examples</summary>
@@ -314,6 +317,7 @@
     }</code></pre>
     </main><br>
     <footer>Content on this page is licensed under the MIT License.</footer>
+    <script src="../darkMode.js"></script>
 </body>
 
 </html>
