@@ -1,4 +1,4 @@
-/* pzplUI 1.6 */
+/* pzplUI 2.0 */
 
 :root {
     scroll-behavior: smooth;
@@ -9,27 +9,36 @@
     --box-shadow-2: 0px 3px 4px rgba(40, 40, 40, 0.4);
     --black: black;
     --black-hover: #212121;
-    --black-light: #455A64;
+    --black-light: #4d4d4d;
+    --black-alert-a: #e6e6e6;
     --white: white;
-    --blue-disabled: #4FC3F7;
-    --blue-light: #42A5F5;
-    --blue: #039BE5;
-    --blue-hover: #0288D1;
-    --green-light: #81C784;
-    --green: #43A047;
-    --green-hover: #388E3C;
-    --red-light: #e57373;
-    --red: #e53935;
-    --red-hover: #d32f2f;
-    --orange-light: #FFB74D;
-    --orange: #FB8C00;
-    --orange-hover: #F57C00;
-    --info-blue-light: #4DD0E1;
-    --info-blue: #00ACC1;
-    --info-blue-hover: #0097A7;
-    --alert-text-color: white;
-    --uncolor: #e0e1e2;
-    --uncolor-hover: #cacbcd;
+    --blue-light: #b6d9fe;
+    --blue: #0270e6;
+    --blue-hover: #0068d7;
+    --blue-alert-text: #0257b3;
+    --blue-alert-a: #003166;
+    --green-light: #a7e1aa;
+    --green: #308c34;
+    --green-hover: #338337;
+    --green-alert-text: #236626;
+    --green-alerta-a: #091a0a;
+    --red-light: #ecaeb4;
+    --red: #d03141;
+    --red-hover: #c03240;
+    --red-alert-text: #a82633;
+    --red-alert-a: #55131a;
+    --orange-light: #fcce94;
+    --orange: #f08a07;
+    --orange-hover: #df8106;
+    --orange-alert-text: #995700;
+    --orange-alert-a: #5b3503;
+    --info-blue-light: #77dde6;
+    --info-blue: #1e9aa6;
+    --info-blue-hover: rgb(3, 129, 143);
+    --info-blue-alert-text: #16727b;
+    --info-blue-alert-a: #072224;
+    --secondary: #64748B;
+    --secondary-hover: #4B5563;
     --text-muted: #7d868e;
     --animation-speed: 1.5s;
     --animation-transform: 300px;
@@ -37,7 +46,11 @@
     --card-border-color: rgba(12, 12, 12, 0.125);
     --card-header-bgcolor: rgba(0, 0, 0, .03);
     --modal-footer: #dee2e6;
-    --font-stack: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Neue", "Helvetica", Arial, Tahoma, Geneva, Verdana, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --mark-color: #fff4b8;
+    --form1: #e9ecef;
+    --form2: #ced4da;
+    --form-shadow: 0 0 0 .25rem rgba(0, 102, 255, 0.438);
+    --font-stack: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Now Text", "Helvetica Neue", "Helvetica", Cantarell, Oxygen, Arial, Tahoma, Geneva, Verdana, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
@@ -115,9 +128,13 @@ h6 {
     font-size: 3.5rem;
 }
 
+.text-light {
+    font-weight: 400;
+}
+
 mark {
     padding: .2em;
-    background-color: #fff4b8;
+    background-color: var(--mark-color);
 }
 
 /* Backgrounds */
@@ -146,6 +163,10 @@ mark {
     background-color: var(--black) !important;
 }
 
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
 .text-normal {
     color: var(--blue) !important;
 }
@@ -170,7 +191,7 @@ mark {
     color: var(--info-blue) !important;
 }
 
-.text-white, .text-white * {
+.text-white {
     color: var(--white) !important;
 }
 
@@ -178,10 +199,43 @@ mark {
     color: var(--text-muted) !important;
 }
 
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.border {
+    border: 1px solid var(--modal-footer) !important;
+}
+
+.border-normal {
+    border-color: var(--blue) !important;
+}
+
+.border-success {
+    border-color: var(--green) !important;
+}
+
+.border-error {
+    border-color: var(--red) !important;
+}
+
+.border-danger {
+    border-color: var(--orange) !important;
+}
+
+.border-info {
+    border-color: var(--info-blue) !important;
+}
+
+.border-secondary {
+    border-color: var(--secondary) !important;
+}
+
 /* Layouts */
 
 .flexbox {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .column {
@@ -248,8 +302,8 @@ mark {
     width: 10%;
 }
 
-.multiline {
-    flex-wrap: wrap;
+.singleline {
+    flex-wrap: nowrap;
 }
 
 .center-flex {
@@ -305,6 +359,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     border-radius: .25rem;
     transition: .3s;
     box-shadow: var(--box-shadow-1);
+    background-color: transparent;
 }
 
 .btn:hover {
@@ -341,6 +396,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .btn-danger {
+    color: var(--black);
     background-color: var(--orange);
 }
 
@@ -364,13 +420,12 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     background-color: var(--black-hover);
 }
 
-.btn-uncolor {
-    color: var(--black);
-    background-color: var(--uncolor);
+.btn-secondary {
+    background-color: var(--secondary);
 }
 
-.btn-uncolor:hover {
-    background-color: var(--uncolor-hover);
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
 }
 
 .btn-normal-outline {
@@ -433,13 +488,12 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     background-color: var(--black);
 }
 
-.btn-uncolor-outline {
-    color: var(--black);
-    border-color: var(--uncolor);
+.btn-secondary-outline {
+    border-color: var(--secondary);
 }
 
-.btn-uncolor-outline:hover {
-    background-color: var(--uncolor);
+.btn-secondary-outline:hover {
+    background-color: var(--secondary);
 }
 
 .btn-block {
@@ -467,31 +521,64 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     padding: .75rem 1.25rem;
     border-radius: .25rem;
     margin-bottom: 1rem;
-    color: var(--alert-text-color);
+    color: var(--white);
 }
 
 .alert-normal {
+    color: var(--blue-alert-text);
     background-color: var(--blue-light);
+}
+
+.alert-normal a {
+    color: var(--blue-alert-a);
 }
 
 .alert-success {
     background-color: var(--green-light);
+    color: var(--green-alert-text);
+}
+
+.alert-success a {
+    color: var(--green-alert-a);
 }
 
 .alert-error {
+    color: var(--red-alert-text);
     background-color: var(--red-light);
 }
 
+.alert-error a {
+    color: var(--red-alert-a);
+}
+
 .alert-danger {
+    color: var(--orange-alert-text);
     background-color: var(--orange-light);
 }
 
+.alert-danger a {
+    color: var(--orange-alert-a);
+}
+
 .alert-info {
+    color: var(--info-blue-alert-text);
     background-color: var(--info-blue-light);
+}
+
+.alert-info a {
+    color: var(--info-blue-alert-a);
 }
 
 .alert-dark {
     background-color: var(--black-light);
+}
+
+.alert-dark a {
+    color: var(--black-alert-a);
+}
+
+.alert a {
+    font-weight: 700;
 }
 
 /* Badges */
@@ -531,10 +618,10 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .badge-pill {
-	border-radius: 50rem !important;
+    border-radius: 50rem !important;
 }
 
-/* Navbar */
+/* Progressbar */
 
 .progress-bar {
     display: flex;
@@ -566,7 +653,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 /* Spinner */
 
-.spinner-border {
+.spinner {
     display: inline-block;
     width: 2rem;
     height: 2rem;
@@ -574,10 +661,10 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     border: .25em solid currentColor;
     border-right-color: transparent;
     border-radius: 50%;
-    animation: spinner-border .75s linear infinite;
+    animation: spinner .75s linear infinite;
 }
 
-@keyframes spinner-border {
+@keyframes spinner {
     to {
         transform: rotate(360deg)
     }
@@ -709,7 +796,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .anim-zoom {
-    animation: pzplui-zoom var(--animation-speed) linear forwards;
+    animation: pzplui-zoom var(--animation-speed) forwards;
 }
 
 @keyframes pzplui-zoom {
@@ -719,6 +806,28 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     to {
         transform: scale(1);
     }
+}
+
+.anim-grow {
+    width: 0%;
+    animation: pzplui-grow calc(var(--animation-speed) / 3) linear forwards;
+}
+
+@keyframes pzplui-grow {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.anim-hover-grow {
+    transition: transform 0.3s;
+}
+
+.anim-hover-grow:hover {
+    transform: scale(1.1);
 }
 
 /* Image Utility Classes */
@@ -1010,8 +1119,8 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     padding: .375rem .75rem;
     font-weight: 400;
     text-align: center;
-    background-color: #e9ecef;
-    border: 1px solid #ced4da;
+    background-color: var(--form1);
+    border: 1px solid var(--form2);
     border-radius: .25rem;
 }
 
@@ -1025,7 +1134,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
     font-size: 1rem;
     line-height: 1.5;
     opacity: 0.9;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--form2);
     border-radius: .25rem;
 }
 
@@ -1043,10 +1152,112 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 input:focus, textarea:focus {
-    box-shadow: 0 0 0 .25rem rgba(0, 102, 255, 0.438);
+    box-shadow: var(--form-shadow);
 }
 
 input, textarea {
     transition: all 0.1s;
     font-family: var(--font-stack);
+}
+
+input[type="color"] {
+	background-color: var(--form1);
+	border: 1px solid var(--form2);
+	border-radius: .25rem;
+	max-width: 2.85rem;
+	height: auto;
+    cursor: pointer;
+	padding: .375rem;
+}
+
+input[type="color"]::-moz-color-swatch {
+	height: 1.5em;
+	border-radius: .25rem;
+}
+
+input[type="file"] {
+	cursor: pointer;
+    width: 100%;
+    padding: .375rem .75rem;
+    border: 1px solid var(--form2);
+    border-radius: .25rem;
+}
+
+input[type="file"]::file-selector-button {
+	padding: .375rem .75rem;
+	margin: -.375rem -.75rem;
+	margin-inline-end: .75rem;
+	border-style: solid;
+	border-width: 0;
+	border-inline-end-width: 1px;
+}
+
+/* Tables */
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td {
+    padding: .7rem;
+    border-top: 1px solid var(--modal-footer);
+}
+
+table thead {
+    border-bottom: 2px solid var(--modal-footer);
+    font-weight: 700;
+}
+
+.table-dark {
+    color: white;
+    background-color: #232527;
+}
+
+.table-dark td, .table-dark th, .table-dark thead {
+	border-color: #35393d;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+	background-color: rgba(59, 59, 59, 0.089);
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(2n+1) {
+	background-color: rgba(235, 235, 235, 0.089);
+}
+
+.table-border td, .table-border th {
+	border: 1px solid var(--modal-footer);
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #1d1e20;
+    --bg-text: white;
+    --box-shadow-1: 0 .2rem 0 rgba(0, 0, 0, 0.05);
+    --box-shadow-2: 0 .2rem 0 rgba(0,0,0,.1);
+    /*--blue-light: #003166;
+    --blue-alert-text: #b6d9fe;
+    --blue-alert-a: rgb(129, 190, 255);
+    --green-light: #338337;
+    --green-alert-text: #e1ffe2;
+    --green-alerta-a: #84eb89;*/
+    --mark-color: #ffdc1f;
+    --form1: #161310;
+    --form2: #312b25;
+    --form-shadow: 0 0 0 .25rem #7dd4fc98;
+}
+
+.dark-mode mark {
+    opacity: 0.8;
+}
+
+.dark-mode input {
+    background-color: rgba(255,255,255,.05);
+    color: white;
+}
+
+.dark-mode table td, .dark-mode table th, .dark-mode table thead {
+    border-color: #47494d;
 }
