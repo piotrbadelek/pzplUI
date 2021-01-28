@@ -1,5 +1,6 @@
 # pzplUI
-*Currently at 2.1*
+*Currently at 2.1* ![jsDelivr badge](https://img.shields.io/jsdelivr/gh/hm/programistazpolski/pzplui)
+
 ![pzplUI - an open source CSS framework](https://raw.githubusercontent.com/ProgramistaZpolski/pzplUI/master/wikiimg/pzplui.png)
 Check out documentation in the Wiki.
 
