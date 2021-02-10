@@ -1,4 +1,4 @@
-/* pzplUI 2.1.1 Core */
+/* pzplUI 2.1.2 Core */
 
 :root {
 	scroll-behavior: smooth;
@@ -49,7 +49,7 @@ h1, .h1 {
 	font-size: 2.5rem;
 }
 
-h2 .h2 {
+h2, .h2 {
 	font-size: 2rem;
 }
 
