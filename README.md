@@ -1,5 +1,5 @@
 # pzplUI
-*Currently at 2.1* ![jsDelivr badge](https://img.shields.io/jsdelivr/gh/hm/programistazpolski/pzplui)
+*Currently at 2.1.2* ![jsDelivr badge](https://img.shields.io/jsdelivr/gh/hm/programistazpolski/pzplui)
 
 ![pzplUI - an open source CSS framework](https://raw.githubusercontent.com/ProgramistaZpolski/pzplUI/master/wikiimg/pzplui.png)
 Check out documentation in the Wiki.
@@ -33,3 +33,6 @@ The base size is 16kB, but you can also use the Slim Version (7.9kB) or the Core
 
 ### Installation
 No installation or NPM required! Just grab the CSS file and put it into your project.
+
+### Credits
+Some code (such as the striped progressbar) has been borrowed from Bootstrap.
