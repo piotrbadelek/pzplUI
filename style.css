@@ -1,4 +1,4 @@
-/* pzplUI 2.1.2 */
+/* pzplUI 2.1.1 */
 
 :root {
 	scroll-behavior: smooth;
@@ -71,8 +71,15 @@ a {
 	display: none !important;
 }
 
-code {
+code, kbd {
 	font-family: "Ubuntu Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+kbd {
+	padding: .2rem .3rem;
+	color: white;
+	background-color: #1d1e20;
+	border-radius: .25rem;
 }
 
 hr {
@@ -127,6 +134,14 @@ h6, .h6 {
 
 .d4 {
 	font-size: 3.5rem;
+}
+
+.d5 {
+	font-size: 3rem;
+}
+
+.d6 {
+	font-size: 2.75rem;
 }
 
 .text-light {
@@ -247,12 +262,24 @@ mark {
 	padding: .75rem;
 }
 
-.flex-80, .flex-75, .flex-65, .flex-60, .flex-50, .flex-45, .flex-40, .flex-35, .flex-30, .flex-25, .flex-20, .flex-10 {
+.flex-95, .flex-90, .flex-85, .flex-80, .flex-75, .flex-70, .flex-65, .flex-60, .flex-55, .flex-50, .flex-45, .flex-40, .flex-35, .flex-30, .flex-25, .flex-20, .flex-15, .flex-10, .flex-5 {
 	flex: none;
 }
 
 .flex-100 {
 	width: 100%;
+}
+
+.flex-95 {
+	width: 95%;
+}
+
+.flex-90 {
+	width: 90%;
+}
+
+.flex-85 {
+	width: 85%;
 }
 
 .flex-80 {
@@ -263,12 +290,20 @@ mark {
 	width: 75%;
 }
 
+.flex-70 {
+	width: 70%;
+}
+
 .flex-65 {
 	width: 65%;
 }
 
 .flex-60 {
 	width: 60%;
+}
+
+.flex-55 {
+	width: 55%;
 }
 
 .flex-50 {
@@ -299,8 +334,16 @@ mark {
 	width: 20%;
 }
 
+.flex-15 {
+	width: 15%;
+}
+
 .flex-10 {
 	width: 10%;
+}
+
+.flex-5 {
+	width: 5%;
 }
 
 .singleline {
@@ -339,6 +382,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .consended h1, .consended h2, .consended h3, .consended h4, .consended h5, .consended h6 {
+	/* ! Depracated class, favor using strict mode instead */
 	margin: 0;
 	padding: 0;
 }
@@ -693,7 +737,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 .box-sm {
 	padding: 0.5rem;
-	box-shadow: 0 .4em 1em -.125em rgba(0,0,0,.05), 0 0 0 1px rgba(0,0,0,.05);
+	box-shadow: 0 .4em 1em -.125em rgba(0, 0, 0, .05), 0 0 0 1px rgba(0, 0, 0, .05);
 }
 
 .box-lg {
@@ -708,7 +752,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 	background-color: #f5f5f5;
 	border: 1px solid #e3e3e3;
 	border-radius: .25rem;
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
 }
 
 .well-lg {
@@ -1270,11 +1314,12 @@ table thead {
 }
 
 /* Dark Mode */
+
 .dark-mode {
 	--bg-color: #1d1e20;
 	--bg-text: white;
 	--box-shadow-1: 0 .2rem 0 rgba(0, 0, 0, 0.05);
-	--box-shadow-2: 0 .2rem 0 rgba(0,0,0,.1);
+	--box-shadow-2: 0 .2rem 0 rgba(0, 0, 0, .1);
 	--mark-color: #ffdc1f;
 	--form1: #161310;
 	--form2: #312b25;
@@ -1287,7 +1332,7 @@ table thead {
 }
 
 .dark-mode input {
-	background-color: rgba(255,255,255,.05);
+	background-color: rgba(255, 255, 255, .05);
 	color: white;
 }
 
@@ -1299,11 +1344,12 @@ table thead {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	border: 0;
-	border-top: 1px solid rgba(0,0,0,.3);
+	border-top: 1px solid rgba(0, 0, 0, .3);
 	border-bottom: none;
 }
 
 /* Jumbotron */
+
 .jumbotron {
 	padding: 4rem 2rem;
 	background-color: var(--jumbotron-bg);
@@ -1313,4 +1359,112 @@ table thead {
 .lead {
 	font-size: 1.4rem;
 	font-weight: 300;
+}
+
+/* Abbr */
+
+abbr[title] {
+	text-decoration: underline dotted;
+	cursor: help;
+}
+
+/* Text aligns */
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* Accordion */
+
+.accordion[open] summary {
+	background-color: var(--blue-light);
+	color: var(--blue-alert-a);
+	border-top-left-radius: .25rem;
+	border-top-right-radius: .25rem;
+}
+
+.accordion:not([open]) summary, .accordion[open] summary, .accordion:not(summary) * {
+	padding: 1.3rem;
+}
+
+.accordion:not(summary) * {
+	border: 1px solid var(--card-border-color);
+}
+
+/* Media Object */
+
+.media {
+	display: flex;
+	align-items: flex-start;
+}
+
+.media>img, .media>a {
+	margin-right: 1rem;
+}
+
+.media .media {
+	margin-top: 1rem !important;
+}
+
+/* Blocks */
+
+.block:not(:last-child) {
+	margin-bottom: 1.5rem;
+}
+
+.block-sm:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.block-lg:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+/* Strict Mode */
+
+.pzplui-strict-mode .h1, .pzplui-strict-mode .h2, .pzplui-strict-mode .h3, .pzplui-strict-mode .h4, .pzplui-strict-mode .h5, .pzplui-strict-mode .h6, .pzplui-strict-mode h1, .pzplui-strict-mode h2, .pzplui-strict-mode h3, .pzplui-strict-mode h4, .pzplui-strict-mode h5, .pzplui-strict-mode h6 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+.pzplui-strict-mode .progress:not(.progress>.progress-bar) {
+	border: none;
+	border-radius: 9999px;
+	display: block;
+	height: 1rem;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+	background-color: #e6e6e6 !important;
+	appearance: none;
+}
+
+/* when will browser vendors finally get together and make a normal pseudo-class for progressbars? */
+
+.pzplui-strict-mode .progress.bg-normal::-moz-progress-bar {
+	background-color: var(--blue);
+}
+
+.pzplui-strict-mode .progress.bg-success::-moz-progress-bar {
+	background-color: var(--green);
+}
+
+.pzplui-strict-mode .progress.bg-error::-moz-progress-bar {
+	background-color: var(--red);
+}
+
+.pzplui-strict-mode .progress.bg-danger::-moz-progress-bar {
+	background-color: var(--orange);
+}
+
+.pzplui-strict-mode .progress.bg-info::-moz-progress-bar {
+	background-color: var(--info-blue);
 }
