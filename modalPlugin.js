@@ -11,7 +11,7 @@ $pzplui_modal.init = function (selector) {
         "shown": "false",
         "payload": undefined,
         "show": function () {
-            this.modal.shown = true;
+            this.shown = true;
             this.modal.style.display = "block";
         },
         "hide": function (payload) {
