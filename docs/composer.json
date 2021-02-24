@@ -1,0 +1,9 @@
+{
+	"name": "ProgramistaZpolski/pzplUIDocs",
+	"description": "A website",
+	"autoload": {
+		"classmap": [
+			"./"
+		]
+	}
+}
