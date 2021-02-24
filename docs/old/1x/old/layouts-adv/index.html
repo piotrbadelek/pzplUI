@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try pzplUI - Advenced Layouts</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .bgWhite {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js"></script>
+</head>
+
+<body>
+    <h1>Try pzplUI - Advanced Layouts</h1>
+    <h2>Hero section</h2>
+    <div class="hero bg-success consended">
+        <h1 class="title">Enterprise Networking</h1>
+        <h3 class="Subtitle">and Investment</h3>
+    </div>
+    <br><br>
+    <pre><code class="language-html">&lt;div class="hero bg-success consended"&gt;
+        &lt;h1 class="title"&gt;Enterprise Networking&lt;/h1&gt;
+        &lt;h3 class="Subtitle"&gt;and Investment&lt;/h3&gt;
+    &lt;/div&gt;</code></pre>
+    <h2>Consended</h2>
+    <h4>Consended elements have less space in beetween.</h4>
+    <br>
+    <i>Not consended div</i>
+    <div>
+        <h1>Hello World!</h1>
+        <h2>I like trains!</h2>
+        <i>Planes are really, really evil.</i>
+    </div><br><br><br>
+    <i>Consended div</i><br><br>
+    <div class="consended">
+        <h1>Hello World!</h1>
+        <h2>I like trains!</h2>
+        <i>Planes are really, really evil.</i>
+        <!-- https://youtu.be/N9RengalkAk?t=109 - straw goats are really, really evil.  -->
+    </div>
+    <br><br>
+    <pre><code class="language-html">&lt;div class="consended"&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+        &lt;h2&gt;I like trains!&lt;/h2&gt;
+        &lt;i&gt;Planes are really, really evil.&lt;/i&gt;
+    &lt;/div&gt;</code></pre>
+    <h2>Containers</h2>
+    <h4>Containters center your div horizontally. You need to have a width specified, tougth. <br>
+        You can use containers as a way to center all of your sites content.</h4>
+    <div class="container bg-success" style="width: 600px;">
+        <h1>Hello World!</h1>
+    </div>
+    <div class="container bg-success" style="text-align: center;
+    border-radius: 5px;
+    padding: 4px;
+    width: 600px;">
+        <h1>Hello World!</h1>
+    </div>
+    <pre><code class="language-html">&lt;div class="container bg-success" style="width: 600px;"&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div class="container bg-success" style="text-align: center;
+    border-radius: 5px;
+    padding: 4px;
+    width: 600px;"&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+    <h2>Box</h2>
+    <h4>Box is a class that adds a little bit of shadow, padding and border-radius on the div.</h4>
+    <div class="bgWhite">
+        <div class="box">
+            <h1>React vs Angular</h1>
+            <h2>tl;dr: both of them are stupid</h2>
+            <h4>Hello guys welcome to another episode today we will compare Angular vs React please hit that subscribe
+                button and enable notifications
+                please remember that i am doing a merch giveaway go to youareanidiot.cc and like my facebook page to
+                have a chance to win a
+                jquery body pillow
+                <!-- <a href="./nudzimisie.png">CLICK TO SEEE!!!!!</a> --> so anyways guys let's compare angular and
+                react so angular is made by google and react is made by facebook
+                and if you ever seen facebooks logo you know that it's blue so make sure that the like button under the
+                video is blue
+                just like in the facebooks logo and if it's blue then you will enter my giveaway for more details watch
+                to the end so anyways
+                i think that <span class="text-normal">[ please pay 2.99$ to unlock the rest of the article ]</span>
+            </h4>
+        </div>
+    </div><br><br>
+    <pre><code class="language-html">&lt;div class="box"&gt;
+    &lt;h1&gt;React vs Angular&lt;/h1&gt;
+    &lt;h2&gt;tl;dr: both of them are stupid&lt;/h2&gt;
+    &lt;h4&gt;Hello guys welcome to another episode today we will compare Angular vs React please hit that subscribe button and enable notifications please remember that i am doing a merch giveaway go to youareanidiot.cc and like my facebook page to have a chance to win a jquery body pillow
+        so anyways guys let's compare angular and react so angular is made by google and react is made by facebook and if you ever seen facebooks logo you know that it's blue so make sure that the like button under the video is blue just like in the facebooks logo and if it's blue then you will enter my giveaway for more details watch to the end so anyways i think that &lt;span class="text-normal"&gt;[ please pay 2.99$ to unlock the rest of the article ]&lt;/span&gt;
+    &lt;/h4&gt;
+&lt;/div&gt;</code></pre>
+
+</body>
+
+</html>
