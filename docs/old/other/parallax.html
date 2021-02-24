@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try pzplUI</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js" defer></script>
+    <style>
+        .bgWhite {
+            /* this class just screams legacy code - like we dont have a text-dark class */
+            color: black;
+        }
+
+        #parallaxImg {
+            width: 640px;
+            height: 426px;
+            background-image: url("./aurora-1197753_1280.jpg");
+            background-size: 125%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
+        <details>
+            <summary>Components</summary>
+            <a href="../components/alert.html">Alerts</a><br>
+            <a href="../components/badge.html">Badges</a><br>
+            <a href="../components/box.html">Box</a><br>
+            <a href="../components/button.html">Buttons</a><br>
+            <a href="../components/card.html">Cards</a><br>
+            <a href="../components/hero.html">Hero</a><br>
+            <a href="../components/modal.html">Modals</a><br>
+            <a href="../components/navbar.html">Navbars</a><br>
+            <a href="../components/pagination.html">Pagination</a><br>
+            <a href="../components/progress.html">Progress</a><br>
+            <a href="../components/spinner.html">Spinners</a><br>
+            <a href="../components/tables.html">Tables</a>
+        </details>
+        <details>
+            <summary>Layout</summary>
+            <a href="./index.html">Overview</a>
+        </details>
+        <details>
+            <summary>Forms</summary>
+            <a href="../forms/text.html">Text</a><br>
+            <a href="../forms/labels.html">Labels</a><br>
+            <a href="../forms/others.html">Others</a>
+        </details>
+        <details>
+            <summary>Examples</summary>
+            <a href="../examples/news/index.html">News</a><br>
+            <a href="../examples/video/index.html">Video</a><br>
+            <a href="../examples/cheatsheet/index.html">Cheatsheet</a><br>
+            <a href="../examples/boilerplate/index.html">Boilerplate</a><br>
+            <a href="../examples/container-boilerplate/index.html">Container Boilerplate</a>
+        </details>
+        <details open>
+            <summary>Others</summary>
+            <a href="./animations.html">Animations</a>
+            <a href="./parallax.html">Parallax</a><br>
+            <a href="./typography.html">Typography</a><br>
+            <a href="./utils.html">Utils</a>
+        </details>
+    </header>
+    <main>
+        <h1><a href="../index.html">pzplUI</a> / <a href="./customize.html">Other</a> / <a
+                href="./parallax.html">Parallax</a>
+        </h1>
+        <h2>Example Parallax</h2>
+        <i>Move your mouse over the image to see the effect!</i><br>
+        <blockquote>
+            <h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-error"
+                    viewBox="0 0 16 16" style="margin-bottom: -6px;">
+                    <path
+                        d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg> Important Notice: You will need the parallax JS Plugin to use this feature.
+            </h4>
+        </blockquote>
+        <div class="bgWhite">
+            <div id="parallaxImg"></div>
+        </div>
+        <br><br>
+
+        <pre><code class="language-html">
+&lt;div id="parallaxImg"&gt;&lt;/div&gt;
+&lt;style&gt;
+    #parallaxImg {
+        width: 640px;
+        height: 426px;
+        background-image: url(./aurora.jpg);
+        background-size: 140%;
+    }
+&lt;/style&gt;
+&lt;script&gt;
+    parallax("#parallaxImg", 0.02);
+&lt;/script&gt;</code></pre>
+
+
+        <script>
+            // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+            // modal pzplUI Plugin
+            "use strict";
+
+
+            let elementer;
+            let scaler;
+
+            function parallax(element, scale) {
+                document.addEventListener("mousemove", parallaxFramework);
+                elementer = document.querySelector(element);
+                scaler = scale;
+                function parallaxFramework(e) {
+                    let windowWidth = window.innerWidth / 2;
+                    let windowHeight = window.innerHeight / 2;
+                    let _mouseX = e.clientX;
+                    let _mouseY = e.clientY;
+                    let _scale2 = scaler * 2;
+                    let _depth1 = `${(_mouseX - windowWidth) * scaler}% ${(_mouseY - windowHeight) * scaler}%`;
+                    let _depth2 = `${(_mouseX - windowWidth) * scaler}% ${(_mouseY - windowHeight) * scaler}%`;
+                    let _depth3 = `${(_mouseX - windowWidth) * _scale2}% ${(_mouseY - windowHeight) * _scale2}%`;
+                    let superWazneInfo = `${_depth3}, ${_depth2}, ${_depth1}`;
+                    elementer.style.backgroundPosition = superWazneInfo;
+                };
+            };
+
+
+            parallax("#parallaxImg", 0.02);
+        // @license-end
+        </script>
+    </main><br>
+    <footer>Content on this page is licensed under the MIT License.</footer>
+    <script src="../darkMode.js"></script>
+</body>
+
+</html>

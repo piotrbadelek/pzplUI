@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try pzplUI</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js" defer></script>
+    <style>
+        /* tech debt over here, fix ASAP. */
+        .elem_showcase {
+            background-color: var(--green);
+            height: 150px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        .disablemargin2 {
+            width: 400px;
+        }
+
+        .dismargin {
+            margin-left: -40px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .showcasegrid {
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 600;
+            padding: 1.25rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
+        <details>
+            <summary>Components</summary>
+            <a href="../components/alert.html">Alerts</a><br>
+            <a href="../components/badge.html">Badges</a><br>
+            <a href="../components/box.html">Box</a><br>
+            <a href="../components/button.html">Buttons</a><br>
+            <a href="../components/card.html">Cards</a><br>
+            <a href="../components/hero.html">Hero</a><br>
+            <a href="../components/modal.html">Modals</a><br>
+            <a href="../components/navbar.html">Navbars</a><br>
+            <a href="../components/pagination.html">Pagination</a><br>
+            <a href="../components/progress.html">Progress</a><br>
+            <a href="../components/spinner.html">Spinners</a><br>
+            <a href="../components/tables.html">Tables</a>
+        </details>
+        <details open>
+            <summary>Layout</summary>
+            <a href="./index.html">Overview</a>
+        </details>
+        <details>
+            <summary>Forms</summary>
+            <a href="../forms/text.html">Text</a><br>
+            <a href="../forms/labels.html">Labels</a><br>
+            <a href="../forms/others.html">Others</a>
+        </details>
+        <details>
+            <summary>Examples</summary>
+            <a href="../examples/news/index.html">News</a><br>
+            <a href="../examples/video/index.html">Video</a><br>
+            <a href="../examples/cheatsheet/index.html">Cheatsheet</a><br>
+            <a href="../examples/boilerplate/index.html">Boilerplate</a><br>
+            <a href="../examples/container-boilerplate/index.html">Container Boilerplate</a>
+        </details>
+        <details>
+            <summary>Others</summary>
+            <a href="../other/parallax.html">Parallax</a><br>
+            <a href="../other/typography.html">Typography</a><br>
+            <a href="../other/utils.html">Utils</a>
+        </details>
+    </header>
+    <main>
+        <h1><a href="../index.html">pzplUI</a> / <a href="./index.html">Layout</a> / <a href="./index.html">Overview</a>
+        </h1>
+        <h2>Consended</h2>
+        <h4>Consended elements have less space in beetween.</h4>
+        <br>
+        <i>Not consended div</i>
+        <div>
+            <h1>Hello World!</h1>
+            <h2>I like trains!</h2>
+            <i>Planes are really, really evil.</i>
+        </div><br><br><br>
+        <i>Consended div</i><br><br>
+        <div class="consended">
+            <h1>Hello World!</h1>
+            <h2>I like trains!</h2>
+            <i>Planes are really, really evil.</i>
+            <!-- https://youtu.be/N9RengalkAk?t=109 - straw goats are really, really evil.  -->
+        </div>
+        <br><br>
+        <pre><code class="language-html">&lt;div class="consended"&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+        &lt;h2&gt;I like trains!&lt;/h2&gt;
+        &lt;i&gt;Planes are really, really evil.&lt;/i&gt;
+    &lt;/div&gt;</code></pre>
+        <h2>Containers</h2>
+        <h4>Containters center your div horizontally. You need to have a width specified, tougth. <br>
+            You can use containers as a way to center all of your sites content.</h4>
+        <div class="container bg-success" style="width: 600px;">
+            <h1>Hello World!</h1>
+        </div>
+        <div class="container bg-success" style="text-align: center;
+    border-radius: 5px;
+    padding: 4px;
+    width: 600px;">
+            <h1>Hello World!</h1>
+        </div>
+        <pre><code class="language-html">&lt;div class="container bg-success" style="width: 600px;"&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div class="container bg-success" style="text-align: center;
+    border-radius: 5px;
+    padding: 4px;
+    width: 600px;"&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+        <h2>Flexbox</h2>
+        <div class="flexbox disablemargin">
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+        </div><br>
+        <button class="btn btn-normal" onclick="addColumn();">Add an element</button>
+        <button class="btn btn-uncolor" onclick="delColumn();">Remove a element</button>
+        <br><br>
+        <pre><code class="language-html">&lt;div class="flexbox"&gt;
+    &lt;div class="column"&gt;&lt;/div&gt;
+    &lt;div class="column"&gt;&lt;/div&gt;
+    &lt;div class="column"&gt;&lt;/div&gt;
+    &lt;div class="column"&gt;&lt;/div&gt;
+    &lt;div class="column"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <h2>Singleline Columns</h2>
+        <div class="flexbox disablemargin2 Singleline">
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+            <div class="column elem_showcase"></div>
+        </div><br>
+        <button class="btn btn-normal" onclick="addColumn2();">Add an element</button>
+        <button class="btn btn-uncolor" onclick="delColumn2();">Remove a element</button>
+        <br><br>
+        <pre><code class="language-html">&lt;div class="flexbox singleline"&gt;
+    &lt;div class="column"&gt;&lt;/div&gt;
+    &lt;div class="column"&gt;&lt;/div&gt;
+    &lt;div class="column"&gt;&lt;/div&gt;
+    &lt;!-- ... --&gt;
+    &lt;div class="column"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <h2>Columns with specific size</h2>
+        <div class="dismargin">
+            <div class="flexbox">
+                <div class="column flex-100">
+                    <p class="showcasegrid bg-success">flex-100</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-80">
+                    <p class="showcasegrid bg-success">flex-80</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-75">
+                    <p class="showcasegrid bg-success">flex-75</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-65">
+                    <p class="showcasegrid bg-success">flex-65</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-60">
+                    <p class="showcasegrid bg-success">flex-60</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-50">
+                    <p class="showcasegrid bg-success">flex-50</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-45">
+                    <p class="showcasegrid bg-success">flex-45</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-40">
+                    <p class="showcasegrid bg-success">flex-40</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-35">
+                    <p class="showcasegrid bg-success">flex-35</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-30">
+                    <p class="showcasegrid bg-success">flex-30</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-25">
+                    <p class="showcasegrid bg-success">flex-25</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-20">
+                    <p class="showcasegrid bg-success">flex-20</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+            <div class="flexbox">
+                <div class="column flex-10">
+                    <p class="showcasegrid bg-success">flex-10</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+                <div class="column">
+                    <p class="showcasegrid bg-success">Auto</p>
+                </div>
+            </div>
+        </div><br>
+        <br><br>
+        <pre><code class="language-html">&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-100"&gt;
+        &lt;p class="bg-success"&gt;flex-100&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-80"&gt;
+        &lt;p class="bg-success"&gt;flex-80&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-75"&gt;
+        &lt;p class="bg-success"&gt;flex-75&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-65"&gt;
+        &lt;p class="bg-success"&gt;flex-65&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-60"&gt;
+        &lt;p class="bg-success"&gt;flex-60&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-50"&gt;
+        &lt;p class="bg-success"&gt;flex-50&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-45"&gt;
+        &lt;p class="bg-success"&gt;flex-45&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-40"&gt;
+        &lt;p class="bg-success"&gt;flex-40&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-35"&gt;
+        &lt;p class="bg-success"&gt;flex-35&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-30"&gt;
+        &lt;p class="bg-success"&gt;flex-30&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-25"&gt;
+        &lt;p class="bg-success"&gt;flex-25&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-20"&gt;
+        &lt;p class="bg-success"&gt;flex-20&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flexbox"&gt;
+    &lt;div class="column flex-10"&gt;
+        &lt;p class="bg-success"&gt;flex-10&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="column"&gt;
+        &lt;p class="bg-success"&gt;Auto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <script>
+            function addColumn() {
+                document.querySelector(".disablemargin").innerHTML += `<div class="column elem_showcase"></div>`;
+            };
+            function delColumn() {
+                document.querySelectorAll(".disablemargin .elem_showcase")[0].remove();
+            };
+
+            function addColumn2() {
+                document.querySelector(".disablemargin2").innerHTML += `<div class="column elem_showcase"></div>`;
+            };
+            function delColumn2() {
+                document.querySelectorAll(".disablemargin2 .elem_showcase")[0].remove();
+            };
+        </script>
+    </main><br>
+    <footer>Content on this page is licensed under the MIT License.</footer>
+    <script src="../darkMode.js"></script>
+</body>
+
+</html>

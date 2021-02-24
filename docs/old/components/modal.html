@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try pzplUI</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js" defer></script>
+</head>
+
+<body class="dark-mode">
+    <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
+        <details open>
+            <summary>Components</summary>
+            <a href="./alert.html">Alerts</a><br>
+            <a href="./badge.html">Badges</a><br>
+            <a href="./box.html">Box</a><br>
+            <a href="./button.html">Buttons</a><br>
+            <a href="./card.html">Cards</a><br>
+            <a href="./hero.html">Hero</a><br>
+            <a href="./modal.html">Modals</a><br>
+            <a href="./navbar.html">Navbars</a><br>
+            <a href="./pagination.html">Pagination</a><br>
+            <a href="./progress.html">Progress</a><br>
+            <a href="./spinner.html">Spinners</a><br>
+            <a href="./tables.html">Tables</a>
+        </details>
+        <details>
+            <summary>Layout</summary>
+            <a href="../layout/index.html">Overview</a>
+        </details>
+        <details>
+            <summary>Forms</summary>
+            <a href="../forms/text.html">Text</a><br>
+            <a href="../forms/labels.html">Labels</a><br>
+            <a href="../forms/others.html">Others</a>
+        </details>
+        <details>
+            <summary>Examples</summary>
+            <a href="../examples/news/index.html">News</a><br>
+            <a href="../examples/video/index.html">Video</a><br>
+            <a href="../examples/cheatsheet/index.html">Cheatsheet</a><br>
+            <a href="../examples/boilerplate/index.html">Boilerplate</a><br>
+            <a href="../examples/container-boilerplate/index.html">Container Boilerplate</a>
+        </details>
+        <details>
+            <summary>Others</summary>
+            <a href="../other/parallax.html">Parallax</a><br>
+            <a href="../other/typography.html">Typography</a><br>
+            <a href="../other/utils.html">Utils</a>
+        </details>
+    </header>
+    <main>
+        <h1><a href="../index.html">pzplUI</a> / <a
+                href="javascript:alert('Components are a ready-to-go things in pzplUI to help you move faster with your development.');">Components</a>
+            / <a href="./modal.html">Modals</a></h1>
+        <h2>Example Modal</h2>
+        <div class="modal text-dark" id="myModal">
+            <div class="modal-content">
+                <div class="modal-header consended">
+                    <h5 class="modal-title" id="exampleModalLiveLabel">Modal title</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Woohoo, you're reading this text in a modal!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-uncolor"
+                        onclick="hideModalShowcaseFramework(0, 'close');">Close</button>
+                    <button type="button" class="btn btn-normal" onclick="hideModalShowcaseFramework(0, 'save');">Save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+        <button onclick="modalShowcaseFramework(0);" class="btn btn-normal">Show modal</button>
+        <br><br>
+        <pre><code class="language-html">&lt;div class="modal text-dark" id="myModal"&gt;
+    &lt;div class="modal-content"&gt;
+        &lt;div class="modal-header consended"&gt;
+            &lt;h5 class="modal-title"&gt;Modal title&lt;/h5&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+            &lt;p&gt;Woohoo, you're reading this text in a modal!&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-footer"&gt;
+            &lt;button type="button" class="btn btn-uncolor"&gt;Close&lt;/button&gt;
+            &lt;button type="button" class="btn btn-normal"&gt;Save changes&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <h2>Using the JS Plugin</h2>
+        <h4>pzplUI incudes a JS plugin for handling modals. It can:
+            <ul>
+                <li>Save modals into a variable</li>
+                <li>Show modals</li>
+                <li>Hide modals</li>
+                <li>Handle payloads</li>
+            </ul>
+            <br>
+            First, save the modal into the variable:<br>
+            <pre><code class="language-js"> let modalElement = $pzplui_modal.init("#myModal"); </code></pre><br>
+            Now you can use
+            <pre><code class="language-js">modalElement.show();</code></pre> to show your modal.<br><br>
+            In order to hide the modal, use
+            <pre><code class="language-js">modalElement.hide(payload);</code></pre><br>
+            Replace <code>payload</code> with the message you want to be carried.<br><br>
+            For example, the Close button can carry the "notSaved" payload, while the Save button<br>
+            can carry the "saved" payload. If you want to carry no payload, replace payload with undefined.
+        </h4>
+        <h2>Not using the JS plugin</h2>
+        <h4>You can write some JS code to handle showing and hiding the modal pretty easly. Simply,<br><br>
+            Make a function that will set the display property to <code>block</code>, and a function that will set it
+            back to <code>none</code><br><br>
+            Some example code:<br><br>
+            <pre><code class="language-js">function showModal() {
+    document.querySelector("#myModal").style.display = "block";
+}    
+function hideModal() {
+    document.querySelector("#myModal").style.display = "none";
+}</code></pre>
+        </h4>
+        <script>
+            // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+            // modal pzplUI Plugin
+            "use strict";
+
+            let $pzplui_modal = {};
+
+            $pzplui_modal.init = function (selector) {
+                let modal = document.querySelector(selector);
+                return {
+                    "modal": modal,
+                    "shown": "false",
+                    "payload": undefined,
+                    "show": function () {
+                        this.modal.shown = true;
+                        this.modal.style.display = "block";
+                    },
+                    "hide": function (payload) {
+                        this.shown = false;
+                        this.payload = payload;
+                        this.modal.style.display = "none";
+                    }
+                };
+            };
+            let modalTemp1 = $pzplui_modal.init("#myModal");
+            function modalShowcaseFramework(mod) {
+                if (mod == 0) {
+                    modalTemp1.show();
+                };
+            };
+
+            function hideModalShowcaseFramework(mod, payload) {
+                if (mod == 0) {
+                    modalTemp1.hide(payload);
+                };
+            };
+        // @license-end
+        </script>
+    </main><br>
+    <footer>Content on this page is licensed under the MIT License.</footer>
+    <script src="../darkMode.js"></script>
+</body>
+
+</html>

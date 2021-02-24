@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try pzplUI</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../shared/prism.css">
+    <script src="../shared/prism.js" defer></script>
+</head>
+
+<body class="dark-mode">
+    <header>
+        <button class="btn btn-normal btn-block p3" onclick="toggleDarkMode();">Toggle Dark Mode</button>
+        <details>
+            <summary>Components</summary>
+            <a href="../components/alert.html">Alerts</a><br>
+            <a href="../components/badge.html">Badges</a><br>
+            <a href="../components/box.html">Box</a><br>
+            <a href="../components/button.html">Buttons</a><br>
+            <a href="../components/card.html">Cards</a><br>
+            <a href="../components/hero.html">Hero</a><br>
+            <a href="../components/modal.html">Modals</a><br>
+            <a href="../components/navbar.html">Navbars</a><br>
+            <a href="../components/pagination.html">Pagination</a><br>
+            <a href="../components/progress.html">Progress</a><br>
+            <a href="../components/spinner.html">Spinners</a><br>
+            <a href="../components/tables.html">Tables</a>
+        </details>
+        <details>
+            <summary>Layout</summary>
+            <a href="./index.html">Overview</a>
+        </details>
+        <details>
+            <summary>Forms</summary>
+            <a href="../forms/text.html">Text</a><br>
+            <a href="../forms/labels.html">Labels</a><br>
+            <a href="../forms/others.html">Others</a>
+        </details>
+        <details>
+            <summary>Examples</summary>
+            <a href="../examples/news/index.html">News</a><br>
+            <a href="../examples/video/index.html">Video</a><br>
+            <a href="../examples/cheatsheet/index.html">Cheatsheet</a><br>
+            <a href="../examples/boilerplate/index.html">Boilerplate</a><br>
+            <a href="../examples/container-boilerplate/index.html">Container Boilerplate</a>
+        </details>
+        <details open>
+            <summary>Others</summary>
+            <a href="./animations.html">Animations</a>
+            <a href="./parallax.html">Parallax</a><br>
+            <a href="./typography.html">Typography</a><br>
+            <a href="./utils.html">Utils</a>
+        </details>
+    </header>
+    <main>
+        <h1><a href="../index.html">pzplUI</a> / <a href="./customize.html">Other</a> / <a href="./darkmode.html">Dark
+                Mode</a>
+        </h1>
+        <h2>Dark Mode - press Shift+D to change theme!</h2><br><br>
+        <h2>Mode change button</h2>
+        <button class="btn btn-info text-white" onclick="toggleDarkMode();"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" fill="currentColor" aria-label="Change theme" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
+            </svg></button>
+        <br><br>
+        <pre><code class="language-html">&lt;button class="btn btn-info text-white" onclick="toggleDarkMode();"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-label="Change theme" viewBox="0 0 16 16"&gt;
+    &lt;path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/&gt;
+  &lt;/svg&gt;&lt;/button&gt;</code></pre>
+    </main><br>
+    <footer>Content on this page is licensed under the MIT License.</footer>
+    <script src="../darkMode.js"></script>
+</body>
+
+</html>
