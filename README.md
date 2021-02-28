@@ -39,6 +39,8 @@ You can also use the jsDelivr CDN link:
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/programistazpolski/pzplui@master/style.min.css">
 ```
 
+Additionaly, you can install the [VSCode extension](http://programistazpolski.ct8.pl/pzplUI/vscode/)
+
 ### Want to contribute?
 Read the [contributing guidelines](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md) to get started!
 
