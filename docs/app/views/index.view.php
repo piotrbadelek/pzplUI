@@ -74,4 +74,8 @@
     <?php endforeach; ?>
 </div>
 
+<footer>
+    <p>Powered by <a href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)"><b>LAMP</b></a></p>
+</footer>
+
 <?php require_once('partials/footer.php'); ?>
