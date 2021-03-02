@@ -1,9 +1,15 @@
-/* pzplUI 2.2 */
+/*
+ pzplUI 2.3
+ MIT Licensed - https://github.com/ProgramistaZpolski/pzplUI
+ */
 
-:root {
+ :root {
+	/* Smooth Scrolling */
 	scroll-behavior: smooth;
+	/* Backgrounds */
 	--bg-color: white;
 	--bg-text: black;
+	/* Colors */
 	--button-text: white;
 	--box-shadow-1: 0px 2px 3px rgba(50, 50, 50, 0.2);
 	--box-shadow-2: 0px 3px 4px rgba(40, 40, 40, 0.4);
@@ -40,9 +46,6 @@
 	--secondary: #64748B;
 	--secondary-hover: #4B5563;
 	--text-muted: #7d868e;
-	--animation-speed: 1.5s;
-	--animation-transform: 300px;
-	--mp-spacing: 1rem;
 	--card-border-color: rgba(12, 12, 12, 0.125);
 	--card-header-bgcolor: rgba(0, 0, 0, .03);
 	--modal-footer: #dee2e6;
@@ -51,6 +54,24 @@
 	--form2: #ced4da;
 	--form-shadow: 0 0 0 .25rem rgba(0, 102, 255, 0.438);
 	--jumbotron-bg: #e9ecef;
+	--link-color: #007bff;
+	--progress-bg: #e9ecef;
+	/* Misc. Settings */
+	--animation-speed: 1.5s;
+	--animation-transform: 300px;
+	--mp-spacing: 1rem;
+	/* Dark Mode Variables */
+	--dark-bg-color: #1d1e20;
+	--dark-bg-text: white;
+	--dark-box-shadow-1: 0 .2rem 0 rgba(0, 0, 0, 0.05);
+	--dark-box-shadow-2: 0 .2rem 0 rgba(0, 0, 0, .1);
+	--dark-mark-color: #ffdc1f;
+	--dark-form1: #161310;
+	--dark-form2: #312b25;
+	--dark-form-shadow: 0 0 0 .25rem #7dd4fc98;
+	--dark-jumbotron-bg: #252525;
+	/* Font Variables */
+	--code-font-stack: "Ubuntu Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 	--font-stack: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Now Text", "Helvetica Neue", "Helvetica", Cantarell, Oxygen, Arial, Tahoma, Geneva, Verdana, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -62,7 +83,7 @@ body {
 }
 
 a {
-	color: #007bff;
+	color: var(--link-color);
 	text-decoration: none;
 	background-color: transparent;
 }
@@ -72,7 +93,7 @@ a {
 }
 
 code, kbd {
-	font-family: "Ubuntu Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-family: var(--code-font-stack);
 }
 
 kbd {
@@ -686,7 +707,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 	overflow: hidden;
 	line-height: 0;
 	font-size: .75rem;
-	background-color: #e9ecef;
+	background-color: var(--progress-bg);
 	border-radius: .25rem;
 	margin-top: 1rem;
 }
@@ -1074,6 +1095,262 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 	margin: calc(var(--mp-spacing) * 2);
 }
 
+.pl0 {
+	padding-left: 0;
+}
+
+.pl1 {
+	padding-left: calc(var(--mp-spacing) * .25);
+}
+
+.pl2 {
+	padding-left: calc(var(--mp-spacing) * .5);
+}
+
+.pl3 {
+	padding-left: var(--mp-spacing);
+}
+
+.pl4 {
+	padding-left: calc(var(--mp-spacing) * 1.25);
+}
+
+.pl5 {
+	padding-left: calc(var(--mp-spacing) * 1.5);
+}
+
+.pl6 {
+	padding-left: calc(var(--mp-spacing) * 1.75);
+}
+
+.pl7 {
+	padding-left: calc(var(--mp-spacing) * 2);
+}
+
+.ml0 {
+	margin-left: 0;
+}
+
+.ml1 {
+	margin-left: calc(var(--mp-spacing) * .25);
+}
+
+.ml2 {
+	margin-left: calc(var(--mp-spacing) * .5);
+}
+
+.ml3 {
+	margin-left: var(--mp-spacing);
+}
+
+.ml4 {
+	margin-left: calc(var(--mp-spacing) * 1.25);
+}
+
+.ml5 {
+	margin-left: calc(var(--mp-spacing) * 1.5);
+}
+
+.ml6 {
+	margin-left: calc(var(--mp-spacing) * 1.75);
+}
+
+.ml7 {
+	margin-left: calc(var(--mp-spacing) * 2);
+}
+
+.pr0 {
+	padding-right: 0;
+}
+
+.pr1 {
+	padding-right: calc(var(--mp-spacing) * .25);
+}
+
+.pr2 {
+	padding-right: calc(var(--mp-spacing) * .5);
+}
+
+.pr3 {
+	padding-right: var(--mp-spacing);
+}
+
+.pr4 {
+	padding-right: calc(var(--mp-spacing) * 1.25);
+}
+
+.pr5 {
+	padding-right: calc(var(--mp-spacing) * 1.5);
+}
+
+.pr6 {
+	padding-right: calc(var(--mp-spacing) * 1.75);
+}
+
+.pr7 {
+	padding-right: calc(var(--mp-spacing) * 2);
+}
+
+.mr0 {
+	margin-right: 0;
+}
+
+.mr1 {
+	margin-right: calc(var(--mp-spacing) * .25);
+}
+
+.mr2 {
+	margin-right: calc(var(--mp-spacing) * .5);
+}
+
+.mr3 {
+	margin-right: var(--mp-spacing);
+}
+
+.mr4 {
+	margin-right: calc(var(--mp-spacing) * 1.25);
+}
+
+.mr5 {
+	margin-right: calc(var(--mp-spacing) * 1.5);
+}
+
+.mr6 {
+	margin-right: calc(var(--mp-spacing) * 1.75);
+}
+
+.mr7 {
+	margin-right: calc(var(--mp-spacing) * 2);
+}
+
+.pt0 {
+	padding-top: 0;
+}
+
+.pt1 {
+	padding-top: calc(var(--mp-spacing) * .25);
+}
+
+.pt2 {
+	padding-top: calc(var(--mp-spacing) * .5);
+}
+
+.pt3 {
+	padding-top: var(--mp-spacing);
+}
+
+.pt4 {
+	padding-top: calc(var(--mp-spacing) * 1.25);
+}
+
+.pt5 {
+	padding-top: calc(var(--mp-spacing) * 1.5);
+}
+
+.pt6 {
+	padding-top: calc(var(--mp-spacing) * 1.75);
+}
+
+.pt7 {
+	padding-top: calc(var(--mp-spacing) * 2);
+}
+
+.mt0 {
+	margin-top: 0;
+}
+
+.mt1 {
+	margin-top: calc(var(--mp-spacing) * .25);
+}
+
+.mt2 {
+	margin-top: calc(var(--mp-spacing) * .5);
+}
+
+.mt3 {
+	margin-top: var(--mp-spacing);
+}
+
+.mt4 {
+	margin-top: calc(var(--mp-spacing) * 1.25);
+}
+
+.mt5 {
+	margin-top: calc(var(--mp-spacing) * 1.5);
+}
+
+.mt6 {
+	margin-top: calc(var(--mp-spacing) * 1.75);
+}
+
+.mt7 {
+	margin-top: calc(var(--mp-spacing) * 2);
+}
+
+.pb0 {
+	padding-bottom: 0;
+}
+
+.pb1 {
+	padding-bottom: calc(var(--mp-spacing) * .25);
+}
+
+.pb2 {
+	padding-bottom: calc(var(--mp-spacing) * .5);
+}
+
+.pb3 {
+	padding-bottom: var(--mp-spacing);
+}
+
+.pb4 {
+	padding-bottom: calc(var(--mp-spacing) * 1.25);
+}
+
+.pb5 {
+	padding-bottom: calc(var(--mp-spacing) * 1.5);
+}
+
+.pb6 {
+	padding-bottom: calc(var(--mp-spacing) * 1.75);
+}
+
+.pb7 {
+	padding-bottom: calc(var(--mp-spacing) * 2);
+}
+
+.mb0 {
+	margin-bottom: 0;
+}
+
+.mb1 {
+	margin-bottom: calc(var(--mp-spacing) * .25);
+}
+
+.mb2 {
+	margin-bottom: calc(var(--mp-spacing) * .5);
+}
+
+.mb3 {
+	margin-bottom: var(--mp-spacing);
+}
+
+.mb4 {
+	margin-bottom: calc(var(--mp-spacing) * 1.25);
+}
+
+.mb5 {
+	margin-bottom: calc(var(--mp-spacing) * 1.5);
+}
+
+.mb6 {
+	margin-bottom: calc(var(--mp-spacing) * 1.75);
+}
+
+.mb7 {
+	margin-bottom: calc(var(--mp-spacing) * 2);
+}
+
 /* Cards */
 
 .card {
@@ -1316,15 +1593,15 @@ table thead {
 /* Dark Mode */
 
 .dark-mode {
-	--bg-color: #1d1e20;
-	--bg-text: white;
-	--box-shadow-1: 0 .2rem 0 rgba(0, 0, 0, 0.05);
-	--box-shadow-2: 0 .2rem 0 rgba(0, 0, 0, .1);
-	--mark-color: #ffdc1f;
-	--form1: #161310;
-	--form2: #312b25;
-	--form-shadow: 0 0 0 .25rem #7dd4fc98;
-	--jumbotron-bg: #252525;
+	--bg-color: var(--dark-bg-color);
+	--bg-text: var(--dark-bg-text);
+	--box-shadow-1: var(--dark-box-shadow-1);
+	--box-shadow-2: var(--dark-box-shadow-2);
+	--mark-color: var(--dark-mark-color);
+	--form1: var(--dark-form1);
+	--form2: var(--dark-form2);
+	--form-shadow: var(--dark-form-shadow);
+	--jumbotron-bg: var(--dark-jumbotron-bg);
 }
 
 .dark-mode mark {
@@ -1435,7 +1712,7 @@ abbr[title] {
 	margin-bottom: 0.5rem;
 }
 
-.pzplui-strict-mode .progress:not(.notstrict) {
+.pzplui-strict-mode .progress:not(.progress>.progress-bar) {
 	border: none;
 	border-radius: 9999px;
 	display: block;
@@ -1443,30 +1720,418 @@ abbr[title] {
 	overflow: hidden;
 	padding: 0;
 	width: 100%;
-	background-color: #e6e6e6 !important;
+	background-color: var(--progress-bg) !important;
 	appearance: none;
 }
 
 /* when will browser vendors finally get together and make a normal pseudo-class for progressbars? */
 
-.pzplui-strict-mode .progress.bg-normal::-moz-progress-bar {
+.pzplui-strict-mode .progress.bg-normal::-moz-progress-bar, .pzplui-strict-mode .progress.bg-normal::-webkit-progress-value {
 	background-color: var(--blue);
 }
 
-.pzplui-strict-mode .progress.bg-success::-moz-progress-bar {
+.pzplui-strict-mode .progress.bg-success::-moz-progress-bar, .pzplui-strict-mode .progress.bg-success::-webkit-progress-value {
 	background-color: var(--green);
 }
 
-.pzplui-strict-mode .progress.bg-error::-moz-progress-bar {
+.pzplui-strict-mode .progress.bg-error::-moz-progress-bar, .pzplui-strict-mode .progress.bg-error::-webkit-progress-value {
 	background-color: var(--red);
 }
 
-.pzplui-strict-mode .progress.bg-danger::-moz-progress-bar {
+.pzplui-strict-mode .progress.bg-danger::-moz-progress-bar, .pzplui-strict-mode .progress.bg-danger::-webkit-progress-value {
 	background-color: var(--orange);
 }
 
-.pzplui-strict-mode .progress.bg-info::-moz-progress-bar {
+.pzplui-strict-mode .progress.bg-info::-moz-progress-bar, .pzplui-strict-mode .progress.bg-info::-webkit-progress-value {
 	background-color: var(--info-blue);
+}
+
+/* Line Heights */
+
+.line-height-1 {
+	line-height: 1;
+}
+
+.line-height-2 {
+	line-height: 1.25;
+}
+
+.line-height-3 {
+	line-height: 1.5;
+}
+
+.line-height-4 {
+	line-height: 1.625;
+}
+
+.line-height-5 {
+	line-height: 1.75;
+}
+
+.line-height-6 {
+	line-height: 2;
+}
+
+/* Other utils */
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.relative {
+	position: relative;
+}
+
+.sticky {
+	position: sticky;
+}
+
+.static {
+	position: static;
+}
+
+.top0 {
+	top: 0%;
+}
+
+.right0 {
+	right: 0%;
+}
+
+.left0 {
+	left: 0%;
+}
+
+.botttom0 {
+	bottom: 0%;
+}
+
+.top5 {
+	top: 5%;
+}
+
+.right5 {
+	right: 5%;
+}
+
+.left5 {
+	left: 5%;
+}
+
+.botttom5 {
+	bottom: 5%;
+}
+
+.top10 {
+	top: 10%;
+}
+
+.right10 {
+	right: 10%;
+}
+
+.left10 {
+	left: 10%;
+}
+
+.botttom10 {
+	bottom: 10%;
+}
+
+.top15 {
+	top: 15%;
+}
+
+.right15 {
+	right: 15%;
+}
+
+.left15 {
+	left: 15%;
+}
+
+.botttom15 {
+	bottom: 15%;
+}
+
+.top20 {
+	top: 20%;
+}
+
+.right20 {
+	right: 20%;
+}
+
+.left20 {
+	left: 20%;
+}
+
+.botttom20 {
+	bottom: 20%;
+}
+
+.top25 {
+	top: 25%;
+}
+
+.right25 {
+	right: 25%;
+}
+
+.left25 {
+	left: 25%;
+}
+
+.botttom25 {
+	bottom: 25%;
+}
+
+.top30 {
+	top: 30%;
+}
+
+.right30 {
+	right: 30%;
+}
+
+.left30 {
+	left: 30%;
+}
+
+.botttom30 {
+	bottom: 30%;
+}
+
+.top35 {
+	top: 35%;
+}
+
+.right35 {
+	right: 35%;
+}
+
+.left35 {
+	left: 35%;
+}
+
+.botttom35 {
+	bottom: 35%;
+}
+
+.top40 {
+	top: 40%;
+}
+
+.right40 {
+	right: 40%;
+}
+
+.left40 {
+	left: 40%;
+}
+
+.botttom40 {
+	bottom: 40%;
+}
+
+.top45 {
+	top: 45%;
+}
+
+.right45 {
+	right: 45%;
+}
+
+.left45 {
+	left: 45%;
+}
+
+.botttom45 {
+	bottom: 45%;
+}
+
+.top50 {
+	top: 50%;
+}
+
+.right50 {
+	right: 50%;
+}
+
+.left50 {
+	left: 50%;
+}
+
+.botttom50 {
+	bottom: 50%;
+}
+
+.top55 {
+	top: 55%;
+}
+
+.right55 {
+	right: 55%;
+}
+
+.left55 {
+	left: 55%;
+}
+
+.botttom55 {
+	bottom: 55%;
+}
+
+.top60 {
+	top: 60%;
+}
+
+.right60 {
+	right: 60%;
+}
+
+.left60 {
+	left: 60%;
+}
+
+.botttom60 {
+	bottom: 60%;
+}
+
+.top65 {
+	top: 65%;
+}
+
+.right65 {
+	right: 65%;
+}
+
+.left65 {
+	left: 65%;
+}
+
+.botttom65 {
+	bottom: 65%;
+}
+
+.top70 {
+	top: 70%;
+}
+
+.right70 {
+	right: 70%;
+}
+
+.left70 {
+	left: 70%;
+}
+
+.botttom70 {
+	bottom: 70%;
+}
+
+.top75 {
+	top: 75%;
+}
+
+.right75 {
+	right: 75%;
+}
+
+.left75 {
+	left: 75%;
+}
+
+.botttom75 {
+	bottom: 75%;
+}
+
+.top80 {
+	top: 80%;
+}
+
+.right80 {
+	right: 80%;
+}
+
+.left80 {
+	left: 80%;
+}
+
+.botttom80 {
+	bottom: 80%;
+}
+
+.top85 {
+	top: 85%;
+}
+
+.right85 {
+	right: 85%;
+}
+
+.left85 {
+	left: 85%;
+}
+
+.botttom85 {
+	bottom: 85%;
+}
+
+.top90 {
+	top: 90%;
+}
+
+.right90 {
+	right: 90%;
+}
+
+.left90 {
+	left: 90%;
+}
+
+.botttom90 {
+	bottom: 90%;
+}
+
+.top95 {
+	top: 95%;
+}
+
+.right95 {
+	right: 95%;
+}
+
+.left95 {
+	left: 95%;
+}
+
+.botttom95 {
+	bottom: 95%;
+}
+
+.top100 {
+	top: 100%;
+}
+
+.right100 {
+	right: 100%;
+}
+
+.left100 {
+	left: 100%;
+}
+
+.botttom100 {
+	bottom: 100%;
 }
 
 header details {
