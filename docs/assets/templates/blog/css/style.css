@@ -1,0 +1,17 @@
+/* your code here */
+
+.fullheight {
+	height: 100vh;
+}
+
+[data-image] {
+	background: no-repeat center center;
+}
+
+nav {
+	opacity: .8;
+}
+
+.blur-bg {
+	background: #292929ce;
+}
