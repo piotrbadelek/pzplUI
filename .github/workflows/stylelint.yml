@@ -29,3 +29,5 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: actions-hub/stylelint@f7f2ea6010d6c2718cbe43a17be12875262cc8e9
         uses: actions-hub/stylelint@v1.1.3
+        env:
+          PATTERN: "style.css"
