@@ -43,8 +43,8 @@
 	--info-blue-hover: rgb(3, 129, 143);
 	--info-blue-alert-text: #16727b;
 	--info-blue-alert-a: #072224;
-	--secondary: #64748B;
-	--secondary-hover: #4B5563;
+	--secondary: #64748b;
+	--secondary-hover: #4b5563;
 	--text-muted: #7d868e;
 	--card-border-color: rgba(12, 12, 12, 0.125);
 	--card-header-bgcolor: rgba(0, 0, 0, .03);
@@ -106,8 +106,8 @@ kbd {
 hr {
 	margin: 20px 0;
 	border: 0;
-	border-top: 1px solid #eeeeee;
-	border-bottom: 1px solid #ffffff;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #fff;
 }
 
 /* Typography */
@@ -732,7 +732,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 @keyframes spinner {
 	to {
-		transform: rotate(360deg)
+		transform: rotate(360deg);
 	}
 }
 
@@ -973,8 +973,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 .navbar ul li {
-	padding-right: .5rem;
-	padding-left: .5rem;
 	display: block;
 	padding: .5rem 1rem;
 	opacity: .8;
@@ -1376,7 +1374,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 /* Modals */
 
 .modal {
-	width: 500px;
 	display: none;
 	position: fixed;
 	z-index: 100;
@@ -1433,6 +1430,18 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 	border: 1px solid var(--modal-footer);
 }
 
+.pag-lg .pag-link {
+	padding: .80rem 1.5rem;
+	font-size: 1.3rem;
+	line-height: 1.5;
+}
+
+.pag-sm .pag-link {
+	padding: .3rem .5rem;
+	font-size: .75rem;
+	line-height: 1.3;
+}
+
 .pag-item.active .pag-link {
 	color: #fff;
 	background-color: var(--blue);
@@ -1448,18 +1457,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 	border-bottom-right-radius: .25rem;
 }
 
-.pag-lg .pag-link {
-	padding: .80rem 1.5rem;
-	font-size: 1.3rem;
-	line-height: 1.5;
-}
-
-.pag-sm .pag-link {
-	padding: .3rem .5rem;
-	font-size: .75rem;
-	line-height: 1.3;
-}
-
 /* Overflows */
 
 .overflow-auto {
@@ -1471,6 +1468,11 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 }
 
 /* Forms */
+
+input, textarea {
+	transition: all 0.1s;
+	font-family: var(--font-stack);
+}
 
 .inputs label {
 	display: flex;
@@ -1512,11 +1514,6 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 
 input:focus, textarea:focus {
 	box-shadow: var(--form-shadow);
-}
-
-input, textarea {
-	transition: all 0.1s;
-	font-family: var(--font-stack);
 }
 
 input[type="color"] {
