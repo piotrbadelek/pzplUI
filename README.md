@@ -54,3 +54,6 @@ Read the [contributing guidelines](CONTRIBUTING.md) and the [code of conduct](CO
 
 ### Credits
 Some code (such as the striped progressbar) has been borrowed from Bootstrap, and the grid system has been inspired by bulma.
+
+### Note
+This framework does not support internet explorer. [Learn why you should stop supporting it too.](https://death-to-ie11.com/)
