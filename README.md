@@ -29,7 +29,7 @@ pzplUI is an open source CSS framework for all your styling needs. It includes:
 
 As an added bonus, pzplUI is responsive by design and ships with exactly **0** media queries while still working on all devices!
 
-The base size is 16kB, but you can also use the Slim Version (7.9kB) or the Core version (2.01kB) which contains only some utilities.
+The base size is 23kB, but you can also use the Slim Version (7.9kB) or the Core version (2.01kB) which contains only some utilities.
 
 ### Installation
 No installation or NPM required! Just grab the CSS file and put it into your project.
