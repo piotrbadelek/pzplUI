@@ -6,7 +6,7 @@
 <br>
 <hr><br>
 <h3>Quick Start</h3>
-<p>Want to add pzplUI to your existing project? Copy this following line to your head:</p>
+<p>Want to add pzplUI to your existing project? Copy this following line to your head element:</p>
 <pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/programistazpolski/pzplui@master/style.min.css"&gt;</code></pre>
 <br>
 <hr><br>
