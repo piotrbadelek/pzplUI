@@ -2470,7 +2470,6 @@ abbr[title] {
 	background-color: var(--green-900);
 }
 
-
 .bg-error-100 {
 	background-color: var(--red-100);
 }
@@ -2503,7 +2502,6 @@ abbr[title] {
 	background-color: var(--red-900);
 }
 
-
 .bg-danger-100 {
 	background-color: var(--orange-100);
 }
@@ -2535,7 +2533,6 @@ abbr[title] {
 .bg-danger-900 {
 	background-color: var(--orange-900);
 }
-
 
 .bg-info-100 {
 	background-color: var(--info-blue-100);
