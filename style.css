@@ -1,5 +1,5 @@
 /*
- pzplUI 2.4
+ pzplUI 2.5
  MIT Licensed - https://github.com/ProgramistaZpolski/pzplUI
  */
 
@@ -7,8 +7,8 @@
 	/* Smooth Scrolling */
 	scroll-behavior: smooth;
 	/* Backgrounds */
-	--bg-color: white;
 	--bg-text: black;
+	--bg-color: white;
 	/* Colors */
 	--button-text: white;
 	--black: black;
@@ -56,6 +56,47 @@
 	--link-color: #007bff;
 	--progress-bg: #e9ecef;
 	--kbd: #1d1e20;
+	/* Color shades */
+	--blue-100: #b6d9fe;
+	--blue-200: #83befe;
+	--blue-300: #51a4fd;
+	--blue-400: #1e8afd;
+	--blue-600: #0257b3;
+	--blue-700: #013f81;
+	--blue-800: #01264e;
+	--blue-900: #000e1c;
+	--green-100: #a7e1aa;
+	--green-200: #81d485;
+	--green-300: #5bc760;
+	--green-400: #3db242;
+	--green-600: #236626;
+	--green-700: #164018;
+	--green-800: #091a0a;
+	--green-900: #000000;
+	--red-100: #f6d7da;
+	--red-200: #ecaeb4;
+	--red-300: #e3848e;
+	--red-400: #d95b67;
+	--red-600: #a82633;
+	--red-700: #7e1d27;
+	--red-800: #55131a;
+	--red-900: #2b0a0d;
+	--orange-100: #fde5c6;
+	--orange-200: #fcce94;
+	--orange-300: #fab863;
+	--orange-400: #f9a131;
+	--orange-600: #be6e06;
+	--orange-700: #8d5104;
+	--orange-800: #5b3503;
+	--orange-900: #2a1801;
+	--info-blue-100: #a2e7ee;
+	--info-blue-200: #77dce6;
+	--info-blue-300: #4bd2df;	
+	--info-blue-400: #26c2d1;	
+	--info-blue-600: #16727b;	
+	--info-blue-700: #0e4a50;	
+	--info-blue-800: #072224;	
+	--info-blue-900: #000000;
 	/* Misc. Settings */
 	--animation-speed: 1.5s;
 	--animation-transform: 300px;
@@ -659,6 +700,24 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 	font-size: var(--text-sm);
 	line-height: var(--line-height-3);
 	border-radius: var(--sm-border-radius);
+}
+
+.btn-group .btn:not(:last-child, :first-child) {
+	border-radius: 0;
+}
+
+.btn-group .btn:last-child {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.btn-group .btn:first-child {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.btn-group .btn:not(:first-child) {
+	margin-left: -4px;
 }
 
 /* Alerts */
@@ -2343,4 +2402,169 @@ abbr[title] {
 
 .br6 {
 	border-radius: calc(var(--normal-border-radius) * 5);
+}
+
+/* Shades */
+.bg-normal-100 {
+	background-color: var(--blue-100);
+}
+
+.bg-normal-200 {
+	background-color: var(--blue-200);
+}
+
+.bg-normal-300 {
+	background-color: var(--blue-300);
+}
+
+.bg-normal-400 {
+	background-color: var(--blue-400);
+}
+
+.bg-normal-600 {
+	background-color: var(--blue-600);
+}
+
+.bg-normal-700 {
+	background-color: var(--blue-700);
+}
+
+.bg-normal-800 {
+	background-color: var(--blue-800);
+}
+
+.bg-normal-900 {
+	background-color: var(--blue-900);
+}
+
+
+.bg-success-100 {
+	background-color: var(--green-100);
+}
+
+.bg-success-200 {
+	background-color: var(--green-200);
+}
+
+.bg-success-300 {
+	background-color: var(--green-300);
+}
+
+.bg-success-400 {
+	background-color: var(--green-400);
+}
+
+.bg-success-600 {
+	background-color: var(--green-600);
+}
+
+.bg-success-700 {
+	background-color: var(--green-700);
+}
+
+.bg-success-800 {
+	background-color: var(--green-800);
+}
+
+.bg-success-900 {
+	background-color: var(--green-900);
+}
+
+
+.bg-error-100 {
+	background-color: var(--red-100);
+}
+
+.bg-error-200 {
+	background-color: var(--red-200);
+}
+
+.bg-error-300 {
+	background-color: var(--red-300);
+}
+
+.bg-error-400 {
+	background-color: var(--red-400);
+}
+
+.bg-error-600 {
+	background-color: var(--red-600);
+}
+
+.bg-error-700 {
+	background-color: var(--red-700);
+}
+
+.bg-error-800 {
+	background-color: var(--red-800);
+}
+
+.bg-error-900 {
+	background-color: var(--red-900);
+}
+
+
+.bg-danger-100 {
+	background-color: var(--orange-100);
+}
+
+.bg-danger-200 {
+	background-color: var(--orange-200);
+}
+
+.bg-danger-300 {
+	background-color: var(--orange-300);
+}
+
+.bg-danger-400 {
+	background-color: var(--orange-400);
+}
+
+.bg-danger-600 {
+	background-color: var(--orange-600);
+}
+
+.bg-danger-700 {
+	background-color: var(--orange-700);
+}
+
+.bg-danger-800 {
+	background-color: var(--orange-800);
+}
+
+.bg-danger-900 {
+	background-color: var(--orange-900);
+}
+
+
+.bg-info-100 {
+	background-color: var(--info-blue-100);
+}
+
+.bg-info-200 {
+	background-color: var(--info-blue-200);
+}
+
+.bg-info-300 {
+	background-color: var(--info-blue-300);
+}
+
+.bg-info-400 {
+	background-color: var(--info-blue-400);
+}
+
+.bg-info-600 {
+	background-color: var(--info-blue-600);
+}
+
+.bg-info-700 {
+	background-color: var(--info-blue-700);
+}
+
+.bg-info-800 {
+	background-color: var(--info-blue-800);
+}
+
+.bg-info-900 {
+	background-color: var(--info-blue-900);
 }
