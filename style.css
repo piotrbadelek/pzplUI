@@ -72,7 +72,7 @@
 	--green-600: #236626;
 	--green-700: #164018;
 	--green-800: #091a0a;
-	--green-900: #000000;
+	--green-900: #000;
 	--red-100: #f6d7da;
 	--red-200: #ecaeb4;
 	--red-300: #e3848e;
@@ -91,12 +91,12 @@
 	--orange-900: #2a1801;
 	--info-blue-100: #a2e7ee;
 	--info-blue-200: #77dce6;
-	--info-blue-300: #4bd2df;	
-	--info-blue-400: #26c2d1;	
-	--info-blue-600: #16727b;	
-	--info-blue-700: #0e4a50;	
-	--info-blue-800: #072224;	
-	--info-blue-900: #000000;
+	--info-blue-300: #4bd2df;
+	--info-blue-400: #26c2d1;
+	--info-blue-600: #16727b;
+	--info-blue-700: #0e4a50;
+	--info-blue-800: #072224;
+	--info-blue-900: #000;
 	/* Misc. Settings */
 	--animation-speed: 1.5s;
 	--animation-transform: 300px;
