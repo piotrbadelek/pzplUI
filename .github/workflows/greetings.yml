@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Hello, thank you for opening this issue! It looks like your first issue, so welcome to this community! An Administrator will soon respond to it.'
+        pr-message: 'Hello, thank you for opening this pull request! It looks like your first issue, so welcome to this community! An Administrator will soon respond to it. In the meantime, you can make sure that your code matches our style guide. (Tabs, 4, LF).'
