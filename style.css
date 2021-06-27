@@ -1074,7 +1074,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 	border-radius: var(--normal-border-radius) !important;
 }
 
-.img-circular {
+.rounded {
 	border-radius: 50% !important;
 }
 
