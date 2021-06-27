@@ -1074,6 +1074,10 @@ blockquote, body, dd, dl, dt, fieldset, figure, hr, html, iframe, legend, li, ol
 	border-radius: var(--normal-border-radius) !important;
 }
 
+.rounded {
+	border-radius: 50% !important;
+}
+
 .img-thumbnail {
 	padding: var(--sm-padding);
 	background: #fff;
